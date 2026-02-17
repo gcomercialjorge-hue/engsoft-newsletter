@@ -40,7 +40,8 @@ nav:
       - Resumo da Semana: 2026/semana-01/index.md
       - Aula - GitHub Introdução: 2026/semana-01/aula-github.md
       - Aula - Git pelo Terminal: 2026/semana-01/aula-git-terminal.md
-  - 🧠 Materiais:
+      - Aula - Aula Arquitetura de Hardware: 2026/semana-01/aula-hardware.md
+🧠 Materiais:
     - Cheatsheets e Templates: frameworks/index.md
 
 plugins:

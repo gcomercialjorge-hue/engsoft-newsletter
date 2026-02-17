@@ -1,0 +1,69 @@
+site_name: Newsletter Engenharia de Software
+site_description: Resumos semanais e materiais de estudo do curso de Engenharia de Software
+site_author: Seu Nome
+site_url: https://gcomercialjorge-hue.github.io/engsoft-newsletter/
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - 🏠 Início: index.md
+  - 📅 2026:
+    - Visão Geral: 2026/index.md
+    - Semana 01:
+      - Resumo da Semana: 2026/semana-01/index.md
+      - Aula - GitHub Introdução: 2026/semana-01/aula-github.md
+      - Aula - Git pelo Terminal: 2026/semana-01/aula-git-terminal.md
+  - 🧠 Materiais:
+    - Cheatsheets e Templates: frameworks/index.md
+
+plugins:
+  - search:
+      lang: pt
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/gcomercialjorge-hue

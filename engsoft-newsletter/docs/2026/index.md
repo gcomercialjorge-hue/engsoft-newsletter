@@ -1,0 +1,40 @@
+# 📅 Ano 2026
+
+Bem-vindo ao conteúdo do primeiro ano de Engenharia de Software!
+
+---
+
+## 📚 Semanas de Aula
+
+| Semana | Tema Principal | Aulas |
+|--------|----------------|-------|
+| [Semana 01](semana-01/index.md) | Git e GitHub | 2 aulas |
+| Semana 02 | *Em breve* | - |
+| Semana 03 | *Em breve* | - |
+
+---
+
+## 🎯 Disciplinas do Semestre
+
+Este semestre estamos cursando:
+
+- 🌐 **Ferramentas WEB e UX** — HTML, CSS, JavaScript, Figma
+- 🖥️ **Sistemas Operacionais** — Linux, terminal, processos
+- 📝 **Linguagem e Pesquisa** — Escrita acadêmica, metodologia
+- 💻 **Fundamentos da Programação** — Lógica, Python
+- 🚀 **PAC** — Projeto integrador
+
+---
+
+## 📊 Progresso
+
+```
+Semana 01: ████████████████████ 100%
+Semana 02: ░░░░░░░░░░░░░░░░░░░░   0%
+Semana 03: ░░░░░░░░░░░░░░░░░░░░   0%
+```
+
+---
+
+!!! info "Dica"
+    Use o menu lateral para navegar entre as semanas e aulas!

@@ -3,7 +3,7 @@
 !!! info "Informações da Aula"
     **Disciplina:** Ferramentas WEB e UX / Sistemas Operacionais  
     **Data:** Fevereiro de 2026  
-    **Professor:** [Nome do Professor]  
+    **Professor:** Ícaro  
     **Tema:** Introdução ao Git e GitHub
 
 ---
@@ -413,17 +413,6 @@ Tente `git pull` primeiro, depois `git push` novamente.
 
 ### "Authentication failed"
 Use um Personal Access Token em vez de senha. Veja o guia no material.
-
----
-
-## 🔜 Próxima Aula
-
-Na **Semana 02** vamos aprofundar em:
-
-- Como resolver conflitos de merge
-- Trabalhando em equipe com branches
-- Pull Requests no GitHub
-- .gitignore: ignorando arquivos
 
 ---
 

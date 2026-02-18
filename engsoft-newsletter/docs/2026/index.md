@@ -8,7 +8,7 @@ Bem-vindo ao conteúdo do primeiro ano de Engenharia de Software!
 
 | Semana | Tema Principal | Aulas |
 |--------|----------------|-------|
-| [Semana 01](semana-01/index.md) | Git e GitHub | 2 aulas |
+| [Semana 01](semana-01/index.md) | Git, GitHub e Arquitetura de Hardware | 3 aulas |
 | Semana 02 | *Em breve* | - |
 | Semana 03 | *Em breve* | - |
 

@@ -3,7 +3,8 @@
 !!! info "Informações da Aula"
     **Disciplina:** Sistemas Operacionais / Ferramentas WEB  
     **Data:** Fevereiro de 2026  
-    **Tema:** Git e GitHub pelo Terminal (Linux e Windows)  
+    **Tema:** Git e GitHub pelo Terminal (Linux e Windows)
+    **Obs:** Não tivemos essa aula. É um bônus de um apaixonado por Linux 
     **Pré-requisito:** Ter completado a Aula 01 (conta no GitHub criada)
 
 ---
@@ -693,16 +694,6 @@ sudo chown -R $USER:$USER .git
 
 ---
 
-## 🔜 Próxima Aula
-
-Na **Semana 03** vamos ver:
-
-- Como resolver conflitos de merge
-- Git diff: vendo diferenças
-- .gitignore: ignorando arquivos
-- Git stash: guardando alterações temporárias
-
----
 
 !!! question "Dúvidas?"
     Pratique os comandos! A melhor forma de aprender é fazendo. Se travar, me chama no grupo!

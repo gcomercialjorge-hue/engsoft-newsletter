@@ -3,7 +3,8 @@
 !!! info "Informações da Aula"
     **Disciplina:** Sistemas Operacionais  
     **Data:** Fevereiro de 2026  
-    **Tipo:** Aula Prática  
+    **Tipo:** Aula Prática
+    **Professor:** Time Robótica
     **Tema:** Desmontagem, identificação de componentes e remontagem de CPU
 
 ---
@@ -547,16 +548,6 @@ Antes de ligar, verifique:
 | **Chipset** | Conjunto de chips que controla comunicação |
 | **Driver** | Programa que permite o SO comunicar com hardware |
 | **Kernel** | Núcleo do sistema operacional |
-
----
-
-## 🔜 Próxima Aula
-
-Agora que você conhece o hardware, nas próximas aulas vamos explorar:
-
-- Como o sistema operacional gerencia esses recursos
-- Linha de comando para monitorar hardware
-- Processos e gerenciamento de memória
 
 ---
 

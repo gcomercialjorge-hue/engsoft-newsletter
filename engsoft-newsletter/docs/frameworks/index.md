@@ -11,18 +11,9 @@ Resumos de uma página com os comandos e conceitos mais importantes.
 | Material | Descrição | Download |
 |----------|-----------|----------|
 | Comandos Linux | Terminal essencial | [PDF](materiais/cheatsheet-linux.pdf) |
-| HTML & CSS | Tags e propriedades | [PDF](materiais/cheatsheet-html-css.pdf) |
+| HTML & CSS | Tags e propriedades | [PDF](materiais/cheatsheet-html.pdf) |
 | Python Básico | Sintaxe e estruturas | [PDF](materiais/cheatsheet-python.pdf) |
 | Git & GitHub | Comandos de versionamento | [PDF](materiais/cheatsheet-git.pdf) |
-
----
-
-## 🗺️ Templates
-
-| Material | Descrição | Download |
-|----------|-----------|----------|
-| Mapa Mental | Template em branco para estudos | [PDF](materiais/template-mapa-mental.pdf) |
-| Checklist Semanal | Acompanhamento por disciplina | [PDF](materiais/checklist-semanal.pdf) |
 
 ---
 

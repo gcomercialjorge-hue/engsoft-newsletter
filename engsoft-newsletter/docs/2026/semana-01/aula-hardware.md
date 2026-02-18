@@ -3,7 +3,6 @@
 !!! info "Informações da Aula"
     **Disciplina:** Sistemas Operacionais  
     **Data:** Fevereiro de 2026  
-    **Tipo:** Aula Prática
     **Professor:** Time Robótica
     **Tema:** Desmontagem, identificação de componentes e remontagem de CPU
 

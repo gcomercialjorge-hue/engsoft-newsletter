@@ -1,6 +1,6 @@
 site_name: Newsletter Engenharia de Software
 site_description: Resumos semanais e materiais de estudo do curso de Engenharia de Software
-site_author: Jorge Eduardo Salvador
+site_author: Seu Nome
 site_url: https://gcomercialjorge-hue.github.io/engsoft-newsletter/
 
 theme:
@@ -29,8 +29,6 @@ theme:
     - search.highlight
     - search.suggest
     - content.code.copy
-  icon:
-    repo: fontawesome/brands/github
 
 nav:
   - 🏠 Início: index.md
@@ -40,8 +38,8 @@ nav:
       - Resumo da Semana: 2026/semana-01/index.md
       - Aula - GitHub Introdução: 2026/semana-01/aula-github.md
       - Aula - Git pelo Terminal: 2026/semana-01/aula-git-terminal.md
-      - Aula - Aula Arquitetura de Hardware: 2026/semana-01/aula-hardware.md
-    - 🧠 Materiais:
+      - Aula - Arquitetura de Hardware: 2026/semana-01/aula-hardware.md
+  - 🧠 Materiais:
     - Cheatsheets e Templates: frameworks/index.md
 
 plugins:

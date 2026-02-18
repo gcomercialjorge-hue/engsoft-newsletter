@@ -1,9 +1,9 @@
 # Aula — Arquitetura de Hardware: Conhecendo o Computador por Dentro
 
 !!! info "Informações da Aula"
-    **Disciplina:** Sistemas Operacionais
-    **Data:** Fevereiro de 2026
-    **Professor:** Time Robótica 
+    **Disciplina:** Sistemas Operacionais 
+    **Data:** Fevereiro de 2026 
+    **Professor:** Time Robótica  
     **Tema:** Desmontagem, identificação de componentes e remontagem de CPU
 
 

@@ -517,7 +517,7 @@ Antes de ligar, verifique:
 |-------|-------|-----------|
 | [Como montar um PC](https://www.youtube.com/watch?v=hK51upU5bkU) | Adrenaline | Tutorial completo de montagem |
 | [Entenda cada peça do PC](https://www.youtube.com/watch?v=ExxFxD4OSZ0) | Diolinux | Explicação de componentes |
-| [O que é o Kernel](https://www.youtube.com/watch?v=7OLwpBjeebc) | Fabio Akita | Explicação técnica acessível |
+| [O que é o Kernel](https://www.youtube.com/watch?v=8afhcpiMh24) | ByteMonk | Explicação técnica acessível |
 | [Limpeza de PC](https://www.youtube.com/watch?v=Y51yZE18qus) | Peperaio Hardware | Tutorial de limpeza |
 
 ---

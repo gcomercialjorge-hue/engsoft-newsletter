@@ -3,8 +3,8 @@
 !!! info "Informações da Aula"
     **Disciplina:** Sistemas Operacionais / Ferramentas WEB  
     **Data:** Fevereiro de 2026  
-    **Tema:** Git e GitHub pelo Terminal (Linux e Windows)
-    **Obs:** Não tivemos essa aula. É um bônus de um apaixonado por Linux 
+    **Tema:** Git e GitHub pelo Terminal (Linux e Windows)  
+    **Obs:** Não tivemos essa aula. É um bônus de um apaixonado por Linux  
     **Pré-requisito:** Ter completado a Aula 01 (conta no GitHub criada)
 
 ---

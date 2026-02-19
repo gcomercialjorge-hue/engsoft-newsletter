@@ -382,8 +382,8 @@ Para fixar o conteúdo, assista estes vídeos:
 | Vídeo | Canal | Duração | Link |
 |-------|-------|---------|------|
 | Git e GitHub para Iniciantes | Rafaella Ballerini | 34 min | [YouTube](https://www.youtube.com/watch?v=DqTITcMq68k) |
-| Como usar Git na prática | Código Fonte TV | 25 min | [YouTube](https://www.youtube.com/watch?v=UBAX-13g8OM) |
-| Git para NOOBS | Fábio Akita | 40 min | [YouTube](https://www.youtube.com/watch?v=6Czd1Yetaac) |
+| Como usar Git na prática | Rafaella Ballerini | 40 min | [YouTube](https://www.youtube.com/watch?v=UBAX-13g8OM) |
+| Entendendo GIT | Fábio Akita | 60 min | [YouTube](https://www.youtube.com/watch?v=6Czd1Yetaac) |
 
 ---
 

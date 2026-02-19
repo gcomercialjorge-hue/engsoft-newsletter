@@ -41,6 +41,8 @@ nav:
       - Aula - Arquitetura de Hardware: 2026/semana-01/aula-hardware.md
   - 🧠 Materiais:
     - Cheatsheets e Templates: frameworks/index.md
+  - 🎬 Entretenimento:
+    - Filmes, Séries e Canais: entretenimento/index.md
 
 plugins:
   - search:

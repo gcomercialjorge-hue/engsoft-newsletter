@@ -610,9 +610,7 @@ git push
 
 | Vídeo | Canal | Link |
 |-------|-------|------|
-| Git pelo Terminal | Curso em Vídeo | [YouTube](https://www.youtube.com/watch?v=2sLB1Mv3_-k) |
-| Terminal Linux para Devs | Diolinux | [YouTube](https://www.youtube.com/watch?v=Vw6P5SvFT-c) |
-| Git na Prática | Código Fonte TV | [YouTube](https://www.youtube.com/watch?v=UBAX-13g8OM) |
+| Git e Github com o VSCode no GNU/Linux | Bora para Prática | [YouTube](https://www.youtube.com/watch?v=VBxmsmPK60s) |
 
 ---
 

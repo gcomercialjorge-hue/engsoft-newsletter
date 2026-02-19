@@ -14,8 +14,21 @@ Resumos de uma página com os comandos e conceitos mais importantes.
 | HTML & CSS | Tags e propriedades | [PDF](materiais/cheatsheet-html.pdf) |
 | Python Básico | Sintaxe e estruturas | [PDF](materiais/cheatsheet-python.pdf) |
 | Git & GitHub | Comandos de versionamento | [PDF](materiais/cheatsheet-git.pdf) |
+| Sql | SELECT, INSERT, UPDATE, DELETE, JOIN, funções | [PDF](materiais/cheatsheet-sql.pdf) |
+| VsCode | Atalhos + Extensões | [PDF](materiais/cheatsheet-vscode.pdf) |
+| Markdown | Títulos, listas, links, tabelas, código | [PDF](materiais/cheatsheet-markdown.pdf) |
 
 ---
+
+## 📝 Templates
+
+Templates prontos para ajudar nos seus estudos.
+
+| Material | Descrição | Download |
+|----------|-----------|----------|
+| Método Cornell | Templates para anotações de aula | [PDF](materiais/template-cornell-dev.pdf) |
+
+
 
 ## 💡 Como usar
 

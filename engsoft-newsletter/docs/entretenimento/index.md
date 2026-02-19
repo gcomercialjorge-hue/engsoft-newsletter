@@ -14,7 +14,7 @@ Filmes, séries, documentários e canais para quem curte tecnologia.
 | **O Jogo da Imitação** | 2014 | Alan Turing e a máquina que quebrou a Enigma |
 | **Os Piratas do Vale do Silício** | 1999 | A rivalidade entre Steve Jobs e Bill Gates |
 | **Jobs** | 2013 | A história de Steve Jobs |
-| **O Quinto Poder** | 2013 | A história do WikiLeaks e Julian Assange |
+| **O Quinto Poder** | 2013 | A história do WikiLeaks e Julian Assange. **Um dos meus Filmes favoritos** |
 
 ### Ficção Científica Tech
 
@@ -37,7 +37,7 @@ Filmes, séries, documentários e canais para quem curte tecnologia.
 | **WarGames** | 1983 | Adolescente quase começa Guerra Nuclear |
 | **Snowden** | 2016 | A história de Edward Snowden |
 | **Who Am I** | 2014 | Grupo de hackers alemães (muito bom!) |
-| **O Código** | 2001 | Documentário sobre Linux e open source |
+| **O Código** | 2001 | Documentário sobre Linux e open source **Maravilhoso**|
 
 ---
 
@@ -52,17 +52,6 @@ Filmes, séries, documentários e canais para quem curte tecnologia.
 | **Halt and Catch Fire** | - | Anos 80, a corrida dos PCs e da internet |
 | **The IT Crowd** | Netflix | Comédia britânica sobre o suporte de TI |
 
-### Black Mirror (episódios tech recomendados)
-
-| Episódio | Temporada | Tema |
-|----------|-----------|------|
-| **Bandersnatch** | Filme | Jogo interativo estilo escolha sua aventura |
-| **San Junipero** | T3 E4 | Vida após a morte em simulação |
-| **Nosedive** | T3 E1 | Sociedade baseada em avaliações |
-| **White Christmas** | Especial | IA e bloqueio de pessoas |
-| **Hang the DJ** | T4 E4 | App de relacionamento com IA |
-| **USS Callister** | T4 E1 | Programador recria pessoas em jogo |
-
 ---
 
 ## 🎞️ Documentários
@@ -70,7 +59,6 @@ Filmes, séries, documentários e canais para quem curte tecnologia.
 | Documentário | Ano | Tema |
 |--------------|-----|------|
 | **O Dilema das Redes** | 2020 | Como redes sociais manipulam você |
-| **Coded Bias** | 2020 | Viés racial em algoritmos de IA |
 | **The Great Hack** | 2019 | Escândalo Cambridge Analytica |
 | **Lo and Behold** | 2016 | A história e futuro da internet |
 | **O Código** | 2001 | Linux, open source e Linus Torvalds |
@@ -116,38 +104,25 @@ Filmes, séries, documentários e canais para quem curte tecnologia.
 
 ## 🎧 Podcasts
 
-### Brasileiros
-
 | Podcast | Tema |
 |---------|------|
 | **Hipsters.tech** | Tecnologia, carreira, tendências |
-| **Dev sem Fronteiras** | Carreira internacional |
-| **Lambda3 Podcast** | Desenvolvimento, metodologias |
-| **PodProgramar** | Programação para iniciantes |
-| **Cabeça de Lab** | Data Science e Machine Learning |
-| **Pizza de Dados** | Data Science descomplicado |
-
-### Gringos
-
-| Podcast | Tema |
-|---------|------|
 | **Syntax** | Web development |
-| **CodeNewbie** | Para quem está começando |
-| **Software Engineering Daily** | Entrevistas técnicas |
-| **The Changelog** | Open source e desenvolvimento |
-| **Lex Fridman Podcast** | IA, ciência, tecnologia |
 
 ---
 
-## 📚 Bônus: Livros de Ficção
+## 📚 Bônus: Livros de Ficção e Não Ficção
+
+Como leitor voraz, não poderia deixar de indicar alguns livros sensacionais.
 
 | Livro | Autor | Sobre |
 |-------|-------|-------|
 | **Neuromancer** | William Gibson | O livro que criou o cyberpunk |
 | **O Guia do Mochileiro das Galáxias** | Douglas Adams | Ficção científica cômica |
-| **Ready Player One** | Ernest Cline | Realidade virtual e cultura geek |
 | **Eu, Robô** | Isaac Asimov | Contos sobre robôs e IA |
 | **O Marciano** | Andy Weir | Sobrevivência em Marte com ciência real |
+| **Cypherpunks** | Julian Assange | Liberdade nas redes |
+| **Eterna Vigilância** | Edward Snowden | Como montei e desvendei o maior sistema de espionagem do mundo |
 
 ---
 

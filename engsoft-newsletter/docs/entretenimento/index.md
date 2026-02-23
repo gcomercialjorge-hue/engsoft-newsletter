@@ -78,6 +78,7 @@ Filmes, séries, documentários e canais para quem curte tecnologia.
 |-------|----------|
 | **Fabio Akita** | Carreira, história da computação, programação |
 | **Código Fonte TV** | Notícias tech, tutoriais, entrevistas |
+| **Yudi Ganeko** | Vlog da vida de um Programador |
 | **Diolinux** | Linux, open source, tutoriais |
 | **Filipe Deschamps** | Programação, carreira, notícias |
 | **Rafaella Ballerini** | Tutoriais para iniciantes |

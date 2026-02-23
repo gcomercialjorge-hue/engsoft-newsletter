@@ -1,4 +1,4 @@
-# 🎬 Entretenimento Dev
+	# 🎬 Entretenimento Dev
 
 Filmes, séries, documentários e canais para quem curte tecnologia.
 
@@ -37,7 +37,7 @@ Filmes, séries, documentários e canais para quem curte tecnologia.
 | **WarGames** | 1983 | Adolescente quase começa Guerra Nuclear |
 | **Snowden** | 2016 | A história de Edward Snowden |
 | **Who Am I** | 2014 | Grupo de hackers alemães (muito bom!) |
-| **O Código** | 2001 | Documentário sobre Linux e open source **Maravilhoso**|
+| **O Código** | 2001 | Documentário sobre Linux e open source. **Maravilhoso**|
 
 ---
 

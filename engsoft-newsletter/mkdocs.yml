@@ -78,7 +78,7 @@ plugins:
         mermaid: png
       fail_fast: !ENV CI
   - mkdocs-video:
-      is_video: True
+      is_video: false
       video_muted: True
       video_controls: True
       css_style:

@@ -47,12 +47,37 @@ nav:
 plugins:
   - search:
       lang: pt
+  - glightbox
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+  - kroki:
+      server_url: !ENV [ KROKI_SERVER_URL, 'https://kroki.io' ]
+      file_types:
+        - png
+        - svg
+      file_type_overrides:
+        mermaid: png
+      fail_fast: !ENV CI
+  - mkdocs-video:
+      is_video: True
+      video_muted: True
+      video_controls: True
+      css_style:
+        width: "50%"
 
 markdown_extensions:
   - tables
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -63,6 +88,9 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
+
+extra_javascript:
+  - https://unpkg.com/mermaid@11/dist/mermaid.min.js
 
 extra:
   social:

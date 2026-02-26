@@ -61,7 +61,14 @@ plugins:
       locale: pt           # em português
       fallback_to_build_date: true  # usa data do build se não houver commit
   - pub-social
-  - pdf-export
+  - with-pdf:
+      author: Seu Nome
+      copyright: Engenharia de Software 2026
+      cover_title: Newsletter Engenharia de Software
+      cover_subtitle: Resumos e Materiais de Estudo
+      enabled_if_env: ENABLE_PDF_EXPORT
+      toc_level: 3
+      two_columns_level: 0
   - kroki:
       server_url: !ENV [ KROKI_SERVER_URL, 'https://kroki.io' ]
       file_types:

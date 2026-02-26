@@ -54,6 +54,14 @@ plugins:
       minify_css: true
       htmlmin_opts:
         remove_comments: true
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago        # exibe como "há 2 dias", "há 1 semana"
+      locale: pt           # em português
+      fallback_to_build_date: true  # usa data do build se não houver commit
+  - pub-social
+  - pdf-export
   - kroki:
       server_url: !ENV [ KROKI_SERVER_URL, 'https://kroki.io' ]
       file_types:

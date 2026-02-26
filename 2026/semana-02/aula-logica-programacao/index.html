@@ -1,0 +1,1829 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Resumos semanais e materiais de estudo do curso de Engenharia de Software" name="description"/>
+<meta content="Seu Nome" name="author"/>
+<link href="https://gcomercialjorge-hue.github.io/engsoft-newsletter/2026/semana-02/aula-logica-programacao/" rel="canonical"/>
+<link href="../aula-pac/" rel="prev"/>
+<link href="../../../frameworks/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.3" name="generator"/>
+<title>Aula - Lógica de Programação - Newsletter Engenharia de Software</title>
+<link href="../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../css/timeago.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#aula-introducao-a-logica-de-programacao">
+          Pular para conteúdo
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Cabeçalho" class="md-header__inner md-grid">
+<a aria-label="Newsletter Engenharia de Software" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Newsletter Engenharia de Software">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Newsletter Engenharia de Software
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Aula - Lógica de Programação
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Modo escuro" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Modo escuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Modo claro" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Modo claro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Abas" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        
+  
+  
+    
+  
+  🏠 Início
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../">
+          
+  
+  
+  📅 2026
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../frameworks/">
+          
+  
+  
+  🧠 Materiais
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../entretenimento/">
+          
+  
+  
+  🎬 Entretenimento
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navegação" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Newsletter Engenharia de Software" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Newsletter Engenharia de Software">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Newsletter Engenharia de Software
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    
+  
+    🏠 Início
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    📅 2026
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    📅 2026
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Semana 01
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Semana 01
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../semana-01/">
+<span class="md-ellipsis">
+    
+  
+    Resumo da Semana
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../semana-01/aula-github/">
+<span class="md-ellipsis">
+    
+  
+    Aula - GitHub Introdução
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../semana-01/aula-git-terminal/">
+<span class="md-ellipsis">
+    
+  
+    Aula - Git pelo Terminal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../semana-01/aula-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Aula - Arquitetura de Hardware
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Semana 02
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Semana 02
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    
+  
+    Resumo da Semana
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../aula-pac/">
+<span class="md-ellipsis">
+    
+  
+    Aula - PAC
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Aula - Lógica de Programação
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Aula - Lógica de Programação
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Índice" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#o-que-e-logica-de-programacao">
+<span class="md-ellipsis">
+      
+        🧠 O que é Lógica de Programação?
+      
+    </span>
+</a>
+<nav aria-label="🧠 O que é Lógica de Programação?" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#analogia-do-dia-a-dia">
+<span class="md-ellipsis">
+      
+        Analogia do dia a dia
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formas-de-representar-a-logica">
+<span class="md-ellipsis">
+      
+        📝 Formas de Representar a Lógica
+      
+    </span>
+</a>
+<nav aria-label="📝 Formas de Representar a Lógica" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fluxograma-simbolos-basicos">
+<span class="md-ellipsis">
+      
+        Fluxograma — Símbolos Básicos
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#as-3-perguntas-magicas">
+<span class="md-ellipsis">
+      
+        🎯 As 3 Perguntas Mágicas
+      
+    </span>
+</a>
+<nav aria-label="🎯 As 3 Perguntas Mágicas" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exemplo-pratico">
+<span class="md-ellipsis">
+      
+        Exemplo Prático
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variaveis-e-tipos-de-dados">
+<span class="md-ellipsis">
+      
+        📦 Variáveis e Tipos de Dados
+      
+    </span>
+</a>
+<nav aria-label="📦 Variáveis e Tipos de Dados" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#o-que-e-uma-variavel">
+<span class="md-ellipsis">
+      
+        O que é uma Variável?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tipos-de-dados">
+<span class="md-ellipsis">
+      
+        Tipos de Dados
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estruturas-de-dados-colecoes">
+<span class="md-ellipsis">
+      
+        Estruturas de Dados (Coleções)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operadores">
+<span class="md-ellipsis">
+      
+        ➕ Operadores
+      
+    </span>
+</a>
+<nav aria-label="➕ Operadores" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operadores-matematicos">
+<span class="md-ellipsis">
+      
+        Operadores Matemáticos
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operadores-de-comparacao">
+<span class="md-ellipsis">
+      
+        Operadores de Comparação
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operadores-logicos">
+<span class="md-ellipsis">
+      
+        Operadores Lógicos
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estruturas-condicionais-sesenao">
+<span class="md-ellipsis">
+      
+        🔀 Estruturas Condicionais (Se/Senão)
+      
+    </span>
+</a>
+<nav aria-label="🔀 Estruturas Condicionais (Se/Senão)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estrutura-basica">
+<span class="md-ellipsis">
+      
+        Estrutura Básica
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exemplo-1-bonus-de-funcionario">
+<span class="md-ellipsis">
+      
+        Exemplo 1: Bônus de Funcionário
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exemplo-2-multiplas-condicoes-if-dentro-de-if">
+<span class="md-ellipsis">
+      
+        Exemplo 2: Múltiplas Condições (If dentro de If)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estruturas-de-repeticao-loops">
+<span class="md-ellipsis">
+      
+        🔁 Estruturas de Repetição (Loops)
+      
+    </span>
+</a>
+<nav aria-label="🔁 Estruturas de Repetição (Loops)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#para-for-quando-voce-sabe-quantas-vezes-repetir">
+<span class="md-ellipsis">
+      
+        Para (For) — Quando você sabe quantas vezes repetir
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enquanto-while-quando-nao-sabe-quantas-vezes">
+<span class="md-ellipsis">
+      
+        Enquanto (While) — Quando não sabe quantas vezes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#funcoes-modularizacao">
+<span class="md-ellipsis">
+      
+        🧩 Funções (Modularização)
+      
+    </span>
+</a>
+<nav aria-label="🧩 Funções (Modularização)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#por-que-usar-funcoes">
+<span class="md-ellipsis">
+      
+        Por que usar funções?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estrutura-de-uma-funcao">
+<span class="md-ellipsis">
+      
+        Estrutura de uma Função
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exemplo">
+<span class="md-ellipsis">
+      
+        Exemplo
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exemplos-praticos-completos">
+<span class="md-ellipsis">
+      
+        💻 Exemplos Práticos Completos
+      
+    </span>
+</a>
+<nav aria-label="💻 Exemplos Práticos Completos" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exemplo-1-calculo-de-projeto-freelancer">
+<span class="md-ellipsis">
+      
+        Exemplo 1: Cálculo de Projeto Freelancer
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exemplo-2-custo-para-encher-o-tanque">
+<span class="md-ellipsis">
+      
+        Exemplo 2: Custo para Encher o Tanque
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exemplo-3-reajuste-de-lista-de-precos">
+<span class="md-ellipsis">
+      
+        Exemplo 3: Reajuste de Lista de Preços
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#glossario">
+<span class="md-ellipsis">
+      
+        📖 Glossário
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#checklist-de-aprendizagem">
+<span class="md-ellipsis">
+      
+        ✅ Checklist de Aprendizagem
+      
+    </span>
+</a>
+<nav aria-label="✅ Checklist de Aprendizagem" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conceitos-basicos">
+<span class="md-ellipsis">
+      
+        Conceitos Básicos
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variaveis-e-tipos">
+<span class="md-ellipsis">
+      
+        Variáveis e Tipos
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operadores_1">
+<span class="md-ellipsis">
+      
+        Operadores
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estruturas">
+<span class="md-ellipsis">
+      
+        Estruturas
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recursos-recomendados">
+<span class="md-ellipsis">
+      
+        🎬 Recursos Recomendados
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#proximas-aulas">
+<span class="md-ellipsis">
+      
+        🔜 Próximas Aulas
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    🧠 Materiais
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    🧠 Materiais
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../frameworks/">
+<span class="md-ellipsis">
+    
+  
+    Cheatsheets e Templates
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    🎬 Entretenimento
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    🎬 Entretenimento
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../entretenimento/">
+<span class="md-ellipsis">
+    
+  
+    Filmes, Séries e Canais
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Índice" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#o-que-e-logica-de-programacao">
+<span class="md-ellipsis">
+      
+        🧠 O que é Lógica de Programação?
+      
+    </span>
+</a>
+<nav aria-label="🧠 O que é Lógica de Programação?" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#analogia-do-dia-a-dia">
+<span class="md-ellipsis">
+      
+        Analogia do dia a dia
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formas-de-representar-a-logica">
+<span class="md-ellipsis">
+      
+        📝 Formas de Representar a Lógica
+      
+    </span>
+</a>
+<nav aria-label="📝 Formas de Representar a Lógica" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fluxograma-simbolos-basicos">
+<span class="md-ellipsis">
+      
+        Fluxograma — Símbolos Básicos
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#as-3-perguntas-magicas">
+<span class="md-ellipsis">
+      
+        🎯 As 3 Perguntas Mágicas
+      
+    </span>
+</a>
+<nav aria-label="🎯 As 3 Perguntas Mágicas" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exemplo-pratico">
+<span class="md-ellipsis">
+      
+        Exemplo Prático
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variaveis-e-tipos-de-dados">
+<span class="md-ellipsis">
+      
+        📦 Variáveis e Tipos de Dados
+      
+    </span>
+</a>
+<nav aria-label="📦 Variáveis e Tipos de Dados" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#o-que-e-uma-variavel">
+<span class="md-ellipsis">
+      
+        O que é uma Variável?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tipos-de-dados">
+<span class="md-ellipsis">
+      
+        Tipos de Dados
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estruturas-de-dados-colecoes">
+<span class="md-ellipsis">
+      
+        Estruturas de Dados (Coleções)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operadores">
+<span class="md-ellipsis">
+      
+        ➕ Operadores
+      
+    </span>
+</a>
+<nav aria-label="➕ Operadores" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operadores-matematicos">
+<span class="md-ellipsis">
+      
+        Operadores Matemáticos
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operadores-de-comparacao">
+<span class="md-ellipsis">
+      
+        Operadores de Comparação
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operadores-logicos">
+<span class="md-ellipsis">
+      
+        Operadores Lógicos
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estruturas-condicionais-sesenao">
+<span class="md-ellipsis">
+      
+        🔀 Estruturas Condicionais (Se/Senão)
+      
+    </span>
+</a>
+<nav aria-label="🔀 Estruturas Condicionais (Se/Senão)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estrutura-basica">
+<span class="md-ellipsis">
+      
+        Estrutura Básica
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exemplo-1-bonus-de-funcionario">
+<span class="md-ellipsis">
+      
+        Exemplo 1: Bônus de Funcionário
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exemplo-2-multiplas-condicoes-if-dentro-de-if">
+<span class="md-ellipsis">
+      
+        Exemplo 2: Múltiplas Condições (If dentro de If)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estruturas-de-repeticao-loops">
+<span class="md-ellipsis">
+      
+        🔁 Estruturas de Repetição (Loops)
+      
+    </span>
+</a>
+<nav aria-label="🔁 Estruturas de Repetição (Loops)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#para-for-quando-voce-sabe-quantas-vezes-repetir">
+<span class="md-ellipsis">
+      
+        Para (For) — Quando você sabe quantas vezes repetir
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enquanto-while-quando-nao-sabe-quantas-vezes">
+<span class="md-ellipsis">
+      
+        Enquanto (While) — Quando não sabe quantas vezes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#funcoes-modularizacao">
+<span class="md-ellipsis">
+      
+        🧩 Funções (Modularização)
+      
+    </span>
+</a>
+<nav aria-label="🧩 Funções (Modularização)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#por-que-usar-funcoes">
+<span class="md-ellipsis">
+      
+        Por que usar funções?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estrutura-de-uma-funcao">
+<span class="md-ellipsis">
+      
+        Estrutura de uma Função
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exemplo">
+<span class="md-ellipsis">
+      
+        Exemplo
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exemplos-praticos-completos">
+<span class="md-ellipsis">
+      
+        💻 Exemplos Práticos Completos
+      
+    </span>
+</a>
+<nav aria-label="💻 Exemplos Práticos Completos" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exemplo-1-calculo-de-projeto-freelancer">
+<span class="md-ellipsis">
+      
+        Exemplo 1: Cálculo de Projeto Freelancer
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exemplo-2-custo-para-encher-o-tanque">
+<span class="md-ellipsis">
+      
+        Exemplo 2: Custo para Encher o Tanque
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exemplo-3-reajuste-de-lista-de-precos">
+<span class="md-ellipsis">
+      
+        Exemplo 3: Reajuste de Lista de Preços
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#glossario">
+<span class="md-ellipsis">
+      
+        📖 Glossário
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#checklist-de-aprendizagem">
+<span class="md-ellipsis">
+      
+        ✅ Checklist de Aprendizagem
+      
+    </span>
+</a>
+<nav aria-label="✅ Checklist de Aprendizagem" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conceitos-basicos">
+<span class="md-ellipsis">
+      
+        Conceitos Básicos
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variaveis-e-tipos">
+<span class="md-ellipsis">
+      
+        Variáveis e Tipos
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operadores_1">
+<span class="md-ellipsis">
+      
+        Operadores
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estruturas">
+<span class="md-ellipsis">
+      
+        Estruturas
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recursos-recomendados">
+<span class="md-ellipsis">
+      
+        🎬 Recursos Recomendados
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#proximas-aulas">
+<span class="md-ellipsis">
+      
+        🔜 Próximas Aulas
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<div><h1 id="aula-introducao-a-logica-de-programacao">Aula — Introdução à Lógica de Programação<a class="headerlink" href="#aula-introducao-a-logica-de-programacao" title="Permanent link">¶</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Informações da Aula</p>
+<p><strong>Disciplina:</strong> PAC I / Fundamentos de Programação<br/>
+<strong>Data:</strong> Fevereiro de 2026<br/>
+<strong>Tema:</strong> Algoritmos e Lógica de Programação</p>
+</div>
+<hr/>
+<h2 id="o-que-e-logica-de-programacao">🧠 O que é Lógica de Programação?<a class="headerlink" href="#o-que-e-logica-de-programacao" title="Permanent link">¶</a></h2>
+<p><strong>Lógica de Programação</strong> é a linha de raciocínio utilizada para criar um algoritmo. É a forma como você pensa para resolver um problema de maneira estruturada.</p>
+<p><strong>Algoritmo</strong> é o passo a passo de instruções que você passa para o computador executar.</p>
+<h3 id="analogia-do-dia-a-dia">Analogia do dia a dia<a class="headerlink" href="#analogia-do-dia-a-dia" title="Permanent link">¶</a></h3>
+<p>Pense em uma receita de bolo:</p>
+<ol>
+<li>Separar os ingredientes</li>
+<li>Misturar a farinha com o açúcar</li>
+<li>Adicionar os ovos</li>
+<li>Bater por 5 minutos</li>
+<li>Colocar no forno por 40 minutos</li>
+</ol>
+<p>Isso é um <strong>algoritmo</strong>! Um passo a passo para chegar a um resultado.</p>
+<hr/>
+<h2 id="formas-de-representar-a-logica">📝 Formas de Representar a Lógica<a class="headerlink" href="#formas-de-representar-a-logica" title="Permanent link">¶</a></h2>
+<p>Existem 3 formas principais de escrever um algoritmo:</p>
+<table>
+<thead>
+<tr>
+<th>Forma</th>
+<th>Descrição</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Descrição Narrativa</strong></td>
+<td>Em português simples, como uma redação</td>
+<td>"Primeiro, pegue o valor do tanque..."</td>
+</tr>
+<tr>
+<td><strong>Fluxograma</strong></td>
+<td>Representação visual com formas geométricas</td>
+<td>Diagrama com setas e caixas</td>
+</tr>
+<tr>
+<td><strong>Pseudocódigo (Portugol)</strong></td>
+<td>Forma intermediária entre português e código</td>
+<td><code>capacidade_tanque = 50</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="fluxograma-simbolos-basicos">Fluxograma — Símbolos Básicos<a class="headerlink" href="#fluxograma-simbolos-basicos" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>    ┌─────────┐
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    │ INÍCIO  │  ← Início/Fim (oval)
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    └────┬────┘
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>         │
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    ┌────▼────┐
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    │ Processo │  ← Processamento (retângulo)
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    └────┬────┘
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>         │
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>    ◇────▼────◇
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>   ╱ Decisão?  ╲  ← Decisão (losango)
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>  ╱             ╲
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a> Sim            Não
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Ferramenta</p>
+<p>O <strong>Flowgorithm</strong> é uma ferramenta gratuita para criar fluxogramas que você vai usar no PAC!</p>
+</div>
+<hr/>
+<h2 id="as-3-perguntas-magicas">🎯 As 3 Perguntas Mágicas<a class="headerlink" href="#as-3-perguntas-magicas" title="Permanent link">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Muito Importante!</p>
+<p>Sempre que for resolver um problema de programação, faça estas 3 perguntas:</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pergunta</th>
+<th>O que significa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Qual resultado você quer?</strong></td>
+<td>O que o programa deve mostrar/fazer no final?</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>O que preciso de informação para chegar nesse resultado?</strong></td>
+<td>Quais dados de entrada são necessários?</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Qual o passo a passo para fazer o que quero?</strong></td>
+<td>Qual a sequência lógica de operações?</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exemplo-pratico">Exemplo Prático<a class="headerlink" href="#exemplo-pratico" title="Permanent link">¶</a></h3>
+<p><strong>Problema:</strong> Calcular quanto custa encher o tanque do carro.</p>
+<table>
+<thead>
+<tr>
+<th>Pergunta</th>
+<th>Resposta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Qual resultado?</td>
+<td>O custo total para encher o tanque</td>
+</tr>
+<tr>
+<td>2. O que preciso?</td>
+<td>Capacidade do tanque, litros atuais, preço do litro</td>
+</tr>
+<tr>
+<td>3. Passo a passo?</td>
+<td>Calcular litros faltando → Multiplicar pelo preço</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="variaveis-e-tipos-de-dados">📦 Variáveis e Tipos de Dados<a class="headerlink" href="#variaveis-e-tipos-de-dados" title="Permanent link">¶</a></h2>
+<h3 id="o-que-e-uma-variavel">O que é uma Variável?<a class="headerlink" href="#o-que-e-uma-variavel" title="Permanent link">¶</a></h3>
+<p>Uma <strong>variável</strong> é uma "caixinha" na memória do computador onde guardamos informações.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>nome_da_variavel = valor
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Regras para nomes de variáveis</p>
+<ul>
+<li>Não começar com número</li>
+<li>Não usar espaços (use <code>_</code> no lugar)</li>
+<li>Não usar caracteres especiais (#, @, !)</li>
+<li>Usar nomes descritivos: <code>preco_produto</code> é melhor que <code>p</code></li>
+</ul>
+</div>
+<h3 id="tipos-de-dados">Tipos de Dados<a class="headerlink" href="#tipos-de-dados" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>O que guarda</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>inteiro (int)</strong></td>
+<td>Números sem casas decimais</td>
+<td><code>idade = 25</code></td>
+</tr>
+<tr>
+<td><strong>float</strong></td>
+<td>Números com casas decimais</td>
+<td><code>preco = 19.90</code></td>
+</tr>
+<tr>
+<td><strong>string</strong></td>
+<td>Textos (entre aspas)</td>
+<td><code>nome = "João"</code></td>
+</tr>
+<tr>
+<td><strong>boolean</strong></td>
+<td>Verdadeiro ou Falso</td>
+<td><code>ativo = True</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estruturas-de-dados-colecoes">Estruturas de Dados (Coleções)<a class="headerlink" href="#estruturas-de-dados-colecoes" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>O que é</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lista</strong></td>
+<td>Conjunto ordenado de valores</td>
+<td><code>notas = [7, 8, 9, 10]</code></td>
+</tr>
+<tr>
+<td><strong>Dicionário</strong></td>
+<td>Pares de chave e valor</td>
+<td><code>produto = {"nome": "Celular", "preco": 1500}</code></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="operadores">➕ Operadores<a class="headerlink" href="#operadores" title="Permanent link">¶</a></h2>
+<h3 id="operadores-matematicos">Operadores Matemáticos<a class="headerlink" href="#operadores-matematicos" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Significado</th>
+<th>Exemplo</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>Soma</td>
+<td><code>5 + 3</code></td>
+<td><code>8</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Subtração</td>
+<td><code>10 - 4</code></td>
+<td><code>6</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Multiplicação</td>
+<td><code>6 * 2</code></td>
+<td><code>12</code></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Divisão</td>
+<td><code>15 / 3</code></td>
+<td><code>5</code></td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>Resto da divisão</td>
+<td><code>10 % 3</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>**</code></td>
+<td>Potência</td>
+<td><code>2 ** 3</code></td>
+<td><code>8</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="operadores-de-comparacao">Operadores de Comparação<a class="headerlink" href="#operadores-de-comparacao" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Significado</th>
+<th>Exemplo</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;</code></td>
+<td>Maior que</td>
+<td><code>5 &gt; 3</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Menor que</td>
+<td><code>5 &lt; 3</code></td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>Maior ou igual</td>
+<td><code>5 &gt;= 5</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>Menor ou igual</td>
+<td><code>4 &lt;= 3</code></td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>==</code></td>
+<td>Igual a</td>
+<td><code>5 == 5</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>Diferente de</td>
+<td><code>5 != 3</code></td>
+<td><code>True</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="operadores-logicos">Operadores Lógicos<a class="headerlink" href="#operadores-logicos" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Significado</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>and</code> (E)</td>
+<td>Ambos verdadeiros</td>
+<td><code>(5 &gt; 3) and (2 &lt; 4)</code> → <code>True</code></td>
+</tr>
+<tr>
+<td><code>or</code> (OU)</td>
+<td>Pelo menos um verdadeiro</td>
+<td><code>(5 &gt; 3) or (2 &gt; 4)</code> → <code>True</code></td>
+</tr>
+<tr>
+<td><code>not</code> (NÃO)</td>
+<td>Inverte o valor</td>
+<td><code>not True</code> → <code>False</code></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="estruturas-condicionais-sesenao">🔀 Estruturas Condicionais (Se/Senão)<a class="headerlink" href="#estruturas-condicionais-sesenao" title="Permanent link">¶</a></h2>
+<p>Permitem que o programa tome decisões baseadas em condições.</p>
+<h3 id="estrutura-basica">Estrutura Básica<a class="headerlink" href="#estrutura-basica" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>Se condição então {
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>    // código se verdadeiro
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>} Caso contrário {
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>    // código se falso
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>}
+</code></pre></div>
+<h3 id="exemplo-1-bonus-de-funcionario">Exemplo 1: Bônus de Funcionário<a class="headerlink" href="#exemplo-1-bonus-de-funcionario" title="Permanent link">¶</a></h3>
+<p><strong>Regra:</strong> Se vendas &gt; 1000, bônus = 250. Caso contrário, bônus = 50.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>vendas = 1200
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>meta = 1000
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>Se vendas &gt; meta então {
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>    bonus = 250
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>} Caso contrário {
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>    bonus = 50
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>}
+<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>
+<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a>exibir(bonus)
+</code></pre></div>
+<p><strong>Resultado:</strong> 250 (porque 1200 &gt; 1000)</p>
+<h3 id="exemplo-2-multiplas-condicoes-if-dentro-de-if">Exemplo 2: Múltiplas Condições (If dentro de If)<a class="headerlink" href="#exemplo-2-multiplas-condicoes-if-dentro-de-if" title="Permanent link">¶</a></h3>
+<p><strong>Regra:</strong> Bônus de 250 se a empresa E o funcionário baterem a meta.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>vendas = 1200
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>meta = 1000
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>vendas_empresa = 11000
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>meta_empresa = 10000
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>Se vendas_empresa &gt; meta_empresa então {
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>    Se vendas &gt; meta então {
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>        bonus = 250
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>    } Caso contrário {
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>        bonus = 50
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>    }
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>} Caso contrário {
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a>    bonus = 0
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>}
+<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a>
+<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>exibir(bonus)
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Dica da aula</p>
+<p>Pode colocar <strong>if dentro de if</strong>! A identação (espaços) é muito importante para o código funcionar corretamente.</p>
+</div>
+<hr/>
+<h2 id="estruturas-de-repeticao-loops">🔁 Estruturas de Repetição (Loops)<a class="headerlink" href="#estruturas-de-repeticao-loops" title="Permanent link">¶</a></h2>
+<p>Permitem repetir um bloco de código várias vezes.</p>
+<h3 id="para-for-quando-voce-sabe-quantas-vezes-repetir">Para (For) — Quando você sabe quantas vezes repetir<a class="headerlink" href="#para-for-quando-voce-sabe-quantas-vezes-repetir" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>Para cada item, até N vezes {
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>    // código a repetir
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>}
+</code></pre></div>
+<p><strong>Exemplo:</strong> Calcular salário com 10% de aumento por 10 anos</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>salario = 2000
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>aumento = 0.1
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>tempo = 10
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>
+<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a>Para cada ano, até tempo anos {
+<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>    salario = salario * (1 + aumento)
+<a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a>}
+<a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a>
+<a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a>exibir(salario)
+</code></pre></div>
+<h3 id="enquanto-while-quando-nao-sabe-quantas-vezes">Enquanto (While) — Quando não sabe quantas vezes<a class="headerlink" href="#enquanto-while-quando-nao-sabe-quantas-vezes" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>Enquanto condição faça {
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>    // código a repetir
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a>}
+</code></pre></div>
+<p><strong>Exemplo:</strong> Quanto tempo para o salário chegar a R$10.000?</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>salario = 2000
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>aumento = 0.1
+<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>tempo = 0
+<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a>
+<a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a>Enquanto salario &lt; 10000 faça {
+<a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a>    salario = salario * (1 + aumento)
+<a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a>    tempo = tempo + 1
+<a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a>}
+<a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a>
+<a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a>exibir(tempo)
+</code></pre></div>
+<p><strong>Resultado:</strong> 17 anos</p>
+<hr/>
+<h2 id="funcoes-modularizacao">🧩 Funções (Modularização)<a class="headerlink" href="#funcoes-modularizacao" title="Permanent link">¶</a></h2>
+<p>Funções servem para <strong>organizar o código</strong> e <strong>evitar repetição</strong>.</p>
+<h3 id="por-que-usar-funcoes">Por que usar funções?<a class="headerlink" href="#por-que-usar-funcoes" title="Permanent link">¶</a></h3>
+<ul>
+<li>Separar código grande em pequenas funcionalidades</li>
+<li>Reutilizar código sem copiar/colar</li>
+<li>Facilitar manutenção (mudar em um lugar só)</li>
+<li><strong>Decomposição Top-Down:</strong> dividir problema grande em problemas menores</li>
+</ul>
+<h3 id="estrutura-de-uma-funcao">Estrutura de uma Função<a class="headerlink" href="#estrutura-de-uma-funcao" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>Funcao nome_da_funcao(parametros) {
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>    // código da função
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>    retornar resultado
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a>}
+</code></pre></div>
+<h3 id="exemplo">Exemplo<a class="headerlink" href="#exemplo" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>Funcao calcular_custo_total(lista_salarios) {
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>    total = somar todos os itens(lista_salarios)
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>    exibir(total)
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>}
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a>
+<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>Funcao calcular_diferenca(novo_total, antigo_total) {
+<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a>    diferenca = novo_total - antigo_total
+<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a>    exibir(diferenca)
+<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a>}
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Dica da aula</p>
+<p>Um código bem <strong>encapsulado</strong> (organizado em funções) vai te ajudar quando ocorrerem mudanças nos cálculos — você não precisa ficar caçando onde mudar!</p>
+</div>
+<hr/>
+<h2 id="exemplos-praticos-completos">💻 Exemplos Práticos Completos<a class="headerlink" href="#exemplos-praticos-completos" title="Permanent link">¶</a></h2>
+<h3 id="exemplo-1-calculo-de-projeto-freelancer">Exemplo 1: Cálculo de Projeto Freelancer<a class="headerlink" href="#exemplo-1-calculo-de-projeto-freelancer" title="Permanent link">¶</a></h3>
+<p><strong>Problema:</strong> Calcular o valor de um projeto trabalhando 8h/dia por 15 dias a R$100/h.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>horas_por_dia = 8
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>dias_totais = 15
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a>horas_trabalho = horas_por_dia * dias_totais
+<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a>custo_hora = 100
+<a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a>custo_total = horas_trabalho * custo_hora
+<a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a>
+<a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a>exibir(custo_total)
+</code></pre></div>
+<p><strong>Passo a passo:</strong>
+1. Descobrir total de horas: 8 × 15 = 120 horas
+2. Multiplicar pelo valor da hora: 120 × 100 = R$12.000</p>
+<h3 id="exemplo-2-custo-para-encher-o-tanque">Exemplo 2: Custo para Encher o Tanque<a class="headerlink" href="#exemplo-2-custo-para-encher-o-tanque" title="Permanent link">¶</a></h3>
+<p><strong>Problema:</strong> Tanque de 50L com 20L, combustível a R$5,80/L.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>capacidade_tanque = 50
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>combustivel_atual = 20
+<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a>valor_combustivel = 5.80
+<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a>
+<a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a>necessidade_abastecimento = capacidade_tanque - combustivel_atual
+<a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a>custo_tanque_cheio = necessidade_abastecimento * valor_combustivel
+<a href="#__codelineno-12-7" id="__codelineno-12-7" name="__codelineno-12-7"></a>
+<a href="#__codelineno-12-8" id="__codelineno-12-8" name="__codelineno-12-8"></a>exibir(custo_tanque_cheio)
+</code></pre></div>
+<p><strong>Passo a passo:</strong>
+1. Descobrir quantos litros faltam: 50 - 20 = 30 litros
+2. Multiplicar pelo preço: 30 × 5,80 = R$174,00</p>
+<h3 id="exemplo-3-reajuste-de-lista-de-precos">Exemplo 3: Reajuste de Lista de Preços<a class="headerlink" href="#exemplo-3-reajuste-de-lista-de-precos" title="Permanent link">¶</a></h3>
+<p><strong>Problema:</strong> Aplicar 5% de aumento em uma lista de produtos.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>lista_precos = [100, 500, 1000, 1500]
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>reajuste = 0.05
+<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a>lista_reajustada = []
+<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a>
+<a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a>Para cada preco na lista_precos faça {
+<a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a>    novo_preco = preco * (1 + reajuste)
+<a href="#__codelineno-13-7" id="__codelineno-13-7" name="__codelineno-13-7"></a>    Adicione novo_preco na lista_reajustada
+<a href="#__codelineno-13-8" id="__codelineno-13-8" name="__codelineno-13-8"></a>}
+<a href="#__codelineno-13-9" id="__codelineno-13-9" name="__codelineno-13-9"></a>
+<a href="#__codelineno-13-10" id="__codelineno-13-10" name="__codelineno-13-10"></a>exibir(lista_reajustada)
+</code></pre></div>
+<p><strong>Resultado:</strong> [105, 525, 1050, 1575]</p>
+<hr/>
+<h2 id="glossario">📖 Glossário<a class="headerlink" href="#glossario" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Algoritmo</strong></td>
+<td>Passo a passo para o computador executar</td>
+</tr>
+<tr>
+<td><strong>Variável</strong></td>
+<td>Espaço na memória para guardar dados</td>
+</tr>
+<tr>
+<td><strong>Condicional</strong></td>
+<td>Estrutura que permite decisões (if/else)</td>
+</tr>
+<tr>
+<td><strong>Loop</strong></td>
+<td>Estrutura que repete código (for/while)</td>
+</tr>
+<tr>
+<td><strong>Função</strong></td>
+<td>Bloco de código reutilizável</td>
+</tr>
+<tr>
+<td><strong>Identação</strong></td>
+<td>Espaços no início da linha (muito importante!)</td>
+</tr>
+<tr>
+<td><strong>Pseudocódigo</strong></td>
+<td>Código em português para planejar a lógica</td>
+</tr>
+<tr>
+<td><strong>Flowgorithm</strong></td>
+<td>Ferramenta para criar fluxogramas</td>
+</tr>
+<tr>
+<td><strong>Append</strong></td>
+<td>Adiciona um item no final de uma lista</td>
+</tr>
+<tr>
+<td><strong>Boolean</strong></td>
+<td>Tipo de dado que só pode ser True ou False</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="checklist-de-aprendizagem">✅ Checklist de Aprendizagem<a class="headerlink" href="#checklist-de-aprendizagem" title="Permanent link">¶</a></h2>
+<h3 id="conceitos-basicos">Conceitos Básicos<a class="headerlink" href="#conceitos-basicos" title="Permanent link">¶</a></h3>
+<ul>
+<li>[ ] Entendo o que é lógica de programação</li>
+<li>[ ] Sei o que é um algoritmo</li>
+<li>[ ] Conheço as 3 formas de representar lógica</li>
+<li>[ ] Sei usar as 3 perguntas mágicas</li>
+</ul>
+<h3 id="variaveis-e-tipos">Variáveis e Tipos<a class="headerlink" href="#variaveis-e-tipos" title="Permanent link">¶</a></h3>
+<ul>
+<li>[ ] Sei criar variáveis</li>
+<li>[ ] Entendo os tipos: int, float, string, boolean</li>
+<li>[ ] Sei a diferença entre lista e dicionário</li>
+</ul>
+<h3 id="operadores_1">Operadores<a class="headerlink" href="#operadores_1" title="Permanent link">¶</a></h3>
+<ul>
+<li>[ ] Sei usar operadores matemáticos (+, -, *, /)</li>
+<li>[ ] Sei usar operadores de comparação (&gt;, &lt;, ==)</li>
+<li>[ ] Entendo operadores lógicos (and, or, not)</li>
+</ul>
+<h3 id="estruturas">Estruturas<a class="headerlink" href="#estruturas" title="Permanent link">¶</a></h3>
+<ul>
+<li>[ ] Sei usar if/else para decisões</li>
+<li>[ ] Sei usar for para repetições com contagem</li>
+<li>[ ] Sei usar while para repetições com condição</li>
+<li>[ ] Entendo o conceito de funções</li>
+</ul>
+<hr/>
+<h2 id="recursos-recomendados">🎬 Recursos Recomendados<a class="headerlink" href="#recursos-recomendados" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>Link/Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Curso Hashtag</strong></td>
+<td>Algoritmos e Lógica de Programação (base desta aula)</td>
+</tr>
+<tr>
+<td><strong>Flowgorithm</strong></td>
+<td>flowgorithm.org - Ferramenta para fluxogramas</td>
+</tr>
+<tr>
+<td><strong>Portugol Studio</strong></td>
+<td>portugol-webstudio.cubos.io - Praticar pseudocódigo</td>
+</tr>
+<tr>
+<td><strong>Visualgo</strong></td>
+<td>visualgo.net - Visualizar algoritmos</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="proximas-aulas">🔜 Próximas Aulas<a class="headerlink" href="#proximas-aulas" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Flowgorithm</strong> — Criando algoritmos visuais</li>
+<li><strong>Atividade Prática</strong> — Lógica aplicada ao Flowgorithm</li>
+<li><strong>Revisão de Programação</strong> — Linguagem C</li>
+</ul>
+<hr/>
+<div class="admonition quote">
+<p class="admonition-title">Lembre-se</p>
+<p>"A melhor forma de aprender é praticar junto com uma linguagem de programação, cuidando sempre da didática e seguindo um fluxo lógico de aprendizado."</p>
+</div></div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="Última atualização">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="26 de fevereiro de 2026 23:55:20 UTC"><span class="timeago" datetime="2026-02-26T23:55:20+00:00" locale="pt"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="26 de fevereiro de 2026 23:55:20 UTC">2026-02-26</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="Criado em">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="26 de fevereiro de 2026 23:55:20 UTC"><span class="timeago" datetime="2026-02-26T23:55:20+00:00" locale="pt"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="26 de fevereiro de 2026 23:55:20 UTC">2026-02-26</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Voltar para o topo
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/gcomercialjorge-hue" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script src="../../../js/timeago.min.js"></script>
+<script src="../../../js/timeago_mkdocs_material.js"></script>
+<script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
+</body>
+</html>

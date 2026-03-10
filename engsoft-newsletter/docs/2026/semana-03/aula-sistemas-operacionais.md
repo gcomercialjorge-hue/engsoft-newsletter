@@ -4,7 +4,6 @@
     **Disciplina:** Sistemas Operacionais  
     **Professor:** Rafael Descio, M.Sc.  
     **Data:** Março de 2026  
-    **Carga Horária:** 60h (45h teórica / 15h prática)
 
 ---
 
@@ -46,7 +45,7 @@ Recursos gerenciados:
 
 **Analogia:** Pense em um aeroporto. Aviões querem pousar, pistas são limitadas, portões são disputados. O controle de tráfego aéreo é o Sistema Operacional.
 
-!!! quote "Frase do Professor"
+!!! quote "Frase do Professor (Do professor substituto)"
     "A decisão que você toma em alto nível deve ser coerente com o que acontece no baixo nível."
 
 ---
@@ -137,7 +136,7 @@ Recursos gerenciados:
 
 **Arquitetura ARM:** Dominante em dispositivos móveis e embarcados.
 
-!!! quote "Dica do Professor"
+!!! quote "Dica do Professor Rafael Descio"
     "Quando vai programar, eu preciso entender qual a necessidade de SO. O que eu vou programar? Qual SO vai me servir melhor?"
 
 ---
@@ -263,9 +262,8 @@ Combina o **desempenho do monolítico** com a **modularidade do microkernel**.
 | Recurso | Link/Descrição |
 |---------|----------------|
 | **Livro** | Sistemas Operacionais Modernos, 5ª Ed. - Tanenbaum e Bos (2022) |
-| **Vídeo** | [O que é Sistema Operacional](https://www.youtube.com/watch?v=B9VWL3gXBaI) - Diolinux |
-| **Vídeo** | [História dos Computadores](https://www.youtube.com/watch?v=HI9OVS5XKGI) - Fabio Akita |
-| **Vídeo** | [Como funciona o Linux](https://www.youtube.com/watch?v=K05cyftMvxI) - Akitando |
+| **Vídeo** | [O que é Sistema Operacional](https://www.youtube.com/watch?v=26QPDBe-NB8) - Crash Course |
+| **Vídeo** | [O que é Linux](https://www.youtube.com/watch?v=CT6BZBzbpWA) - Diolinux |
 
 ---
 
@@ -286,12 +284,3 @@ Responda as perguntas abaixo para consolidar o aprendizado:
     Compare o Kernel Monolítico e o Microkernel. Em qual situação você usaria cada um? (Dica: pense em desempenho vs. segurança/isolamento)
 
 ---
-
-## 🔜 Próxima Aula
-
-**Conceitos Fundamentais de SO:**
-
-- Processos (estado, registradores, execução)
-- Threads (compartilhamento de memória, paralelismo)
-- Concorrência (múltiplos processos disputando recursos)
-- Deadlock (recursos bloqueados aguardando outros recursos)

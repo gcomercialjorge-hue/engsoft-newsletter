@@ -180,7 +180,7 @@ Mantenha o foco na **necessidade, desejo e limitações do usuário** durante to
 
 ### Wireframe
 
-Esboços simples de telas — estruturam e validam ideias **sem** detalhes como cores, fontes ou imagens.
+Esboços simples de telas, estruturam e validam ideias **sem** detalhes como cores, fontes ou imagens.
 
 **Elementos básicos:** cabeçalhos, rodapés, barras laterais, áreas de conteúdo.
 
@@ -207,7 +207,7 @@ Modelo mais detalhado com questões estéticas importantes, mas **estático** (n
 - Melhorar feedback visual
 
 !!! warning "Na disciplina"
-    Não usar baixa fidelidade — usar protótipos de alta fidelidade!
+    Não usar baixa fidelidade, usar protótipos de alta fidelidade!
 
 ---
 
@@ -217,23 +217,17 @@ Modelo mais detalhado com questões estéticas importantes, mas **estático** (n
 
 | Ferramenta | Tipo | Link |
 |------------|------|------|
-| **Figma** | Design/Protótipo | figma.com |
-| **Framer** | Design/Protótipo | framer.com |
-| **Sketch** | Design (Mac) | sketch.com |
-| **Adobe XD** | Design/Protótipo | adobe.com/products/xd |
-| **Wireframe.cc** | Wireframe | wireframe.cc |
-| **Mockflow** | Mockup | mockflow.com |
-| **Miro** | Colaboração | miro.com |
-| **LucidChart** | Diagramas | lucidchart.com |
+| **Figma** |[Site Figma](https://www.figma.com/)|
+| **Framer** | |[Site Framer](https://www.framer.com/)|
+| **Adobe XD** |[Site Adobe XD](https://adobexdplatform.com/)|
+| **Wireframe.cc** |[Site Wireframe](https://wireframe.cc/)|
 
 ### Paleta de Cores
 
 | Ferramenta | Link |
 |------------|------|
-| **Adobe Color** | color.adobe.com |
-| **Coolors** | coolors.co |
-| **Paletton** | paletton.com |
-| **MyColor Space** | mycolor.space |
+| **Adobe Color** |[Crie suas Paletas](https://color.adobe.com/pt/)|
+| **Coolors** |[Gere suas Paletas](https://coolor.co/)|
 
 !!! tip "Dica"
     Defina uma **paleta de cores de referência** no projeto inteiro para manter consistência.
@@ -242,52 +236,40 @@ Modelo mais detalhado com questões estéticas importantes, mas **estático** (n
 
 | Ferramenta | Descrição |
 |------------|-----------|
-| **IXD Checklist** | Checklist de UX por categorias (ixdchecklist.com) |
-| **WAVE** | Avaliação de acessibilidade (wave.webaim.org) |
-| **UX CHECK** | Extensão Chrome para avaliação heurística |
+| **IXD Checklist** | [Checklist de UX por categorias](https://ixdchecklist.com/) |
+| **WAVE** | [Avaliação de acessibilidade](https://wave.webaim.org/) |
 
 ### Design Systems e Bibliotecas
 
 | Sistema | Descrição |
 |---------|-----------|
-| **Material Design** | Sistema de design do Google (m3.material.io) |
-| **Bootstrap** | Framework CSS responsivo |
-| **Ant Design** | Biblioteca open source para React |
-| **Material UI** | Componentes React baseados no Material Design |
+| **Material Design** | [Sistema de design do Google](https://m3.material.io/) |
+| **Bootstrap** | [Framework CSS responsivo](https://getbootstrap.com/) |
+| **Ant Design** | [Biblioteca open source para React](https://ant.design/) |
+| **Material UI** | [Componentes React baseados no Material Design](https://mui.com/material-ui/) |
 
 ### Componentes CSS
 
 | Ferramenta | O que oferece |
 |------------|---------------|
-| **UIverse** | Botões, Cards, Loaders, Inputs (uiverse.io) |
-| **UI Glass** | Efeitos de vidro (ui.glass/generator) |
-| **CSSmatic** | Box Shadow, Gradients (cssmatic.com) |
-| **Grabient** | Gradientes (grabient.com) |
-
-### Banco de Imagens Gratuitas
-
-| Site | Link |
-|------|------|
-| **Unsplash** | unsplash.com |
-| **Pexels** | pexels.com |
-| **Pixabay** | pixabay.com |
-| **Reshot** | reshot.com |
+| **UIverse** | [Botões, Cards, Loaders, Inputs](https://uiverse.io/) |
+| **UI Glass** | [Efeitos de vidro](https://www.youtube.com/generator) |
 
 ### Ilustrações e Avatares
 
 | Site | Tipo |
 |------|------|
-| **unDraw** | Ilustrações SVG |
-| **Avataaars** | Geradores de avatares |
-| **Open Doodles** | Ilustrações desenho à mão |
-| **Storyset** | Ilustrações animadas |
-| **Blush Design** | Ilustrações customizáveis |
+| **unDraw** | [Ilustrações SVG](https://undraw.co/) |
+| **Avataaars** | [Geradores de avatares](https://getavataaars.com/) |
+| **Open Doodles** | [Ilustrações desenho à mão](https://www.opendoodles.com/) |
+| **Storyset** | [Ilustrações animadas](https://storyset.com/) |
+| **Blush Design** | [Ilustrações customizáveis](https://blush.design/pt) |
 
 ### Fontes
 
 | Site | Link |
 |------|------|
-| **Google Fonts** | fonts.google.com |
+| **Google Fonts** | [Fontes Gratuitas](https://fonts.google.com/) |
 
 ---
 
@@ -310,22 +292,24 @@ HTML + CSS + JavaScript = **Suficiente para desenvolver front-end**
 
 | Ferramenta | Link |
 |------------|------|
-| **VS Code** | code.visualstudio.com |
-| **CodePen** | codepen.io (editor online) |
+| **VS Code** | [Editor de Código Open Source](https://code.visualstudio.com/) |
+| **CodePen** | [Editor Front-end Online](https://codepen.io/) |
 
 ### Extensões VS Code Recomendadas
 
 - **HTML Snippets** — Tags HTML5
 - **HTML CSS Support** — CSS Intellisense para HTML
 - **Live Server** — Servidor local com recarga automática
+- **Prettier** — Organiza seu código automaticamente
+- **Image Preview** — Mostra a imagem que você colocou via link
 
 ### Acessibilidade
 
 | Recurso | Link |
 |---------|------|
 | **WCAG Guidelines** | w3.org/WAI/WCAG21/quickref |
-| **Guia WCAG** | guia-wcag.com |
-| **eMAG** | emag.governoeletronico.gov.br |
+| **Guia WCAG** |[Guia WCAG](https://guia-wcag.com/) |
+| **eMAG** | [Guia eMAG](https://emag.governoeletronico.gov.br/) |
 
 ### Responsividade
 
@@ -386,11 +370,9 @@ Jakob Nielsen criou as 10 heurísticas de usabilidade:
 
 | Recurso | Link |
 |---------|------|
-| **Nielsen Norman Group** | nngroup.com |
-| **UX Design Brasil** | brasil.uxdesign.cc |
-| **Behance** | behance.net (inspiração de designs) |
-| **Dribbble** | dribbble.com (inspiração de designs) |
-| **OverAPI Cheat Sheets** | overapi.com |
+| **Nielsen Norman Group** | [Cursos e Treinamentos](https://www.nngroup.com/) |
+| **UX Design Brasil** | [Conteúdo sobre UX](https://brasil.uxdesign.cc/)
+| **Behance** | [Inspiração de designs](https://www.behance.net/) |
 
 ---
 
@@ -409,9 +391,3 @@ Jakob Nielsen criou as 10 heurísticas de usabilidade:
     O que significa "design centrado no usuário" e por que é importante manter o foco nas necessidades do usuário durante todo o projeto?
 
 ---
-
-## 🔜 Próxima Aula
-
-- Prática com **Figma**
-- Criação de protótipos de alta fidelidade
-- Aplicação das heurísticas de Nielsen

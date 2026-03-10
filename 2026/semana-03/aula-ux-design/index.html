@@ -1,0 +1,2113 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Resumos semanais e materiais de estudo do curso de Engenharia de Software" name="description"/>
+<meta content="Seu Nome" name="author"/>
+<link href="https://gcomercialjorge-hue.github.io/engsoft-newsletter/2026/semana-03/aula-ux-design/" rel="canonical"/>
+<link href="../aula-sistemas-operacionais/" rel="prev"/>
+<link href="../../../frameworks/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.3" name="generator"/>
+<title>Aula - UX Design - Newsletter Engenharia de Software</title>
+<link href="../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../css/timeago.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#aula-ux-design-fundamentos-e-ferramentas">
+          Pular para conteúdo
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Cabeçalho" class="md-header__inner md-grid">
+<a aria-label="Newsletter Engenharia de Software" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Newsletter Engenharia de Software">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Newsletter Engenharia de Software
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Aula - UX Design
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Modo escuro" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Modo escuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Modo claro" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Modo claro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Abas" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        
+  
+  
+    
+  
+  🏠 Início
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../">
+          
+  
+  
+  📅 2026
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../frameworks/">
+          
+  
+  
+  🧠 Materiais
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../entretenimento/">
+          
+  
+  
+  🎬 Entretenimento
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navegação" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Newsletter Engenharia de Software" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Newsletter Engenharia de Software">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Newsletter Engenharia de Software
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    
+  
+    🏠 Início
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    📅 2026
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    📅 2026
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Semana 01
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Semana 01
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../semana-01/">
+<span class="md-ellipsis">
+    
+  
+    Resumo da Semana
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../semana-01/aula-github/">
+<span class="md-ellipsis">
+    
+  
+    Aula - GitHub Introdução
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../semana-01/aula-git-terminal/">
+<span class="md-ellipsis">
+    
+  
+    Aula - Git pelo Terminal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../semana-01/aula-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Aula - Arquitetura de Hardware
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Semana 02
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Semana 02
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../semana-02/">
+<span class="md-ellipsis">
+    
+  
+    Resumo da Semana
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../semana-02/aula-pac/">
+<span class="md-ellipsis">
+    
+  
+    Aula - PAC
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../semana-02/aula-logica-programacao/">
+<span class="md-ellipsis">
+    
+  
+    Aula - Lógica de Programação
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Semana 03
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Semana 03
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    
+  
+    Resumo da Semana
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../aula-sistemas-operacionais/">
+<span class="md-ellipsis">
+    
+  
+    Aula - Sistemas Operacionais
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Aula - UX Design
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Aula - UX Design
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Índice" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#o-que-e-ux-design">
+<span class="md-ellipsis">
+      
+        🎯 O que é UX Design?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#os-3-pilares-das-boas-experiencias">
+<span class="md-ellipsis">
+      
+        🔺 Os 3 Pilares das Boas Experiências
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#colmeia-de-experiencia-do-usuario-peter-morville">
+<span class="md-ellipsis">
+      
+        🐝 Colmeia de Experiência do Usuário (Peter Morville)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#o-que-e-usabilidade">
+<span class="md-ellipsis">
+      
+        📋 O que é Usabilidade?
+      
+    </span>
+</a>
+<nav aria-label="📋 O que é Usabilidade?" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-criterios-de-nielsen-para-uma-boa-interface">
+<span class="md-ellipsis">
+      
+        5 Critérios de Nielsen para uma boa interface:
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#efeito-de-usabilidade-estetica">
+<span class="md-ellipsis">
+      
+        Efeito de Usabilidade Estética
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ux-vs-ui-qual-a-diferenca">
+<span class="md-ellipsis">
+      
+        🎨 UX vs UI — Qual a diferença?
+      
+    </span>
+</a>
+<nav aria-label="🎨 UX vs UI — Qual a diferença?" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dicas-de-ui">
+<span class="md-ellipsis">
+      
+        Dicas de UI
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#os-10-principios-de-ux-joshua-porter">
+<span class="md-ellipsis">
+      
+        📝 Os 10 Princípios de UX (Joshua Porter)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#design-centrado-no-usuario">
+<span class="md-ellipsis">
+      
+        👤 Design Centrado no Usuário
+      
+    </span>
+</a>
+<nav aria-label="👤 Design Centrado no Usuário" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#etapas-do-design-centrado-no-usuario">
+<span class="md-ellipsis">
+      
+        Etapas do Design Centrado no Usuário:
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#os-5-passos-do-ux">
+<span class="md-ellipsis">
+      
+        🚀 Os 5 Passos do UX
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wireframe-vs-mockup-vs-prototipo">
+<span class="md-ellipsis">
+      
+        📐 Wireframe vs Mockup vs Protótipo
+      
+    </span>
+</a>
+<nav aria-label="📐 Wireframe vs Mockup vs Protótipo" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#o-fluxo-de-desenvolvimento">
+<span class="md-ellipsis">
+      
+        O Fluxo de Desenvolvimento
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comparativo">
+<span class="md-ellipsis">
+      
+        Comparativo
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wireframe">
+<span class="md-ellipsis">
+      
+        Wireframe
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mockup">
+<span class="md-ellipsis">
+      
+        Mockup
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prototipo">
+<span class="md-ellipsis">
+      
+        Protótipo
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ferramentas-essenciais">
+<span class="md-ellipsis">
+      
+        🛠️ Ferramentas Essenciais
+      
+    </span>
+</a>
+<nav aria-label="🛠️ Ferramentas Essenciais" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prototipagem-e-design">
+<span class="md-ellipsis">
+      
+        Prototipagem e Design
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paleta-de-cores">
+<span class="md-ellipsis">
+      
+        Paleta de Cores
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#avaliacao-de-ux">
+<span class="md-ellipsis">
+      
+        Avaliação de UX
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#design-systems-e-bibliotecas">
+<span class="md-ellipsis">
+      
+        Design Systems e Bibliotecas
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#componentes-css">
+<span class="md-ellipsis">
+      
+        Componentes CSS
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#banco-de-imagens-gratuitas">
+<span class="md-ellipsis">
+      
+        Banco de Imagens Gratuitas
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ilustracoes-e-avatares">
+<span class="md-ellipsis">
+      
+        Ilustrações e Avatares
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fontes">
+<span class="md-ellipsis">
+      
+        Fontes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ferramentas-para-desenvolvimento-web">
+<span class="md-ellipsis">
+      
+        💻 Ferramentas para Desenvolvimento Web
+      
+    </span>
+</a>
+<nav aria-label="💻 Ferramentas para Desenvolvimento Web" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#o-basico-para-front-end">
+<span class="md-ellipsis">
+      
+        O Básico para Front-End
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#frameworks-javascript">
+<span class="md-ellipsis">
+      
+        Frameworks JavaScript
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ide-e-editores">
+<span class="md-ellipsis">
+      
+        IDE e Editores
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extensoes-vs-code-recomendadas">
+<span class="md-ellipsis">
+      
+        Extensões VS Code Recomendadas
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#acessibilidade">
+<span class="md-ellipsis">
+      
+        Acessibilidade
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#responsividade">
+<span class="md-ellipsis">
+      
+        Responsividade
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#heuristicas-de-nielsen">
+<span class="md-ellipsis">
+      
+        🔟 Heurísticas de Nielsen
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pessoas-importantes-em-ux">
+<span class="md-ellipsis">
+      
+        📚 Pessoas Importantes em UX
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#glossario">
+<span class="md-ellipsis">
+      
+        📖 Glossário
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#para-aprofundar">
+<span class="md-ellipsis">
+      
+        🎬 Para Aprofundar
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#perguntas-para-fixacao">
+<span class="md-ellipsis">
+      
+        ✅ Perguntas para Fixação
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#proxima-aula">
+<span class="md-ellipsis">
+      
+        🔜 Próxima Aula
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    🧠 Materiais
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    🧠 Materiais
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../frameworks/">
+<span class="md-ellipsis">
+    
+  
+    Cheatsheets e Templates
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    🎬 Entretenimento
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    🎬 Entretenimento
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../entretenimento/">
+<span class="md-ellipsis">
+    
+  
+    Filmes, Séries e Canais
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Índice" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#o-que-e-ux-design">
+<span class="md-ellipsis">
+      
+        🎯 O que é UX Design?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#os-3-pilares-das-boas-experiencias">
+<span class="md-ellipsis">
+      
+        🔺 Os 3 Pilares das Boas Experiências
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#colmeia-de-experiencia-do-usuario-peter-morville">
+<span class="md-ellipsis">
+      
+        🐝 Colmeia de Experiência do Usuário (Peter Morville)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#o-que-e-usabilidade">
+<span class="md-ellipsis">
+      
+        📋 O que é Usabilidade?
+      
+    </span>
+</a>
+<nav aria-label="📋 O que é Usabilidade?" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-criterios-de-nielsen-para-uma-boa-interface">
+<span class="md-ellipsis">
+      
+        5 Critérios de Nielsen para uma boa interface:
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#efeito-de-usabilidade-estetica">
+<span class="md-ellipsis">
+      
+        Efeito de Usabilidade Estética
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ux-vs-ui-qual-a-diferenca">
+<span class="md-ellipsis">
+      
+        🎨 UX vs UI — Qual a diferença?
+      
+    </span>
+</a>
+<nav aria-label="🎨 UX vs UI — Qual a diferença?" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dicas-de-ui">
+<span class="md-ellipsis">
+      
+        Dicas de UI
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#os-10-principios-de-ux-joshua-porter">
+<span class="md-ellipsis">
+      
+        📝 Os 10 Princípios de UX (Joshua Porter)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#design-centrado-no-usuario">
+<span class="md-ellipsis">
+      
+        👤 Design Centrado no Usuário
+      
+    </span>
+</a>
+<nav aria-label="👤 Design Centrado no Usuário" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#etapas-do-design-centrado-no-usuario">
+<span class="md-ellipsis">
+      
+        Etapas do Design Centrado no Usuário:
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#os-5-passos-do-ux">
+<span class="md-ellipsis">
+      
+        🚀 Os 5 Passos do UX
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wireframe-vs-mockup-vs-prototipo">
+<span class="md-ellipsis">
+      
+        📐 Wireframe vs Mockup vs Protótipo
+      
+    </span>
+</a>
+<nav aria-label="📐 Wireframe vs Mockup vs Protótipo" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#o-fluxo-de-desenvolvimento">
+<span class="md-ellipsis">
+      
+        O Fluxo de Desenvolvimento
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comparativo">
+<span class="md-ellipsis">
+      
+        Comparativo
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wireframe">
+<span class="md-ellipsis">
+      
+        Wireframe
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mockup">
+<span class="md-ellipsis">
+      
+        Mockup
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prototipo">
+<span class="md-ellipsis">
+      
+        Protótipo
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ferramentas-essenciais">
+<span class="md-ellipsis">
+      
+        🛠️ Ferramentas Essenciais
+      
+    </span>
+</a>
+<nav aria-label="🛠️ Ferramentas Essenciais" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prototipagem-e-design">
+<span class="md-ellipsis">
+      
+        Prototipagem e Design
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paleta-de-cores">
+<span class="md-ellipsis">
+      
+        Paleta de Cores
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#avaliacao-de-ux">
+<span class="md-ellipsis">
+      
+        Avaliação de UX
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#design-systems-e-bibliotecas">
+<span class="md-ellipsis">
+      
+        Design Systems e Bibliotecas
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#componentes-css">
+<span class="md-ellipsis">
+      
+        Componentes CSS
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#banco-de-imagens-gratuitas">
+<span class="md-ellipsis">
+      
+        Banco de Imagens Gratuitas
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ilustracoes-e-avatares">
+<span class="md-ellipsis">
+      
+        Ilustrações e Avatares
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fontes">
+<span class="md-ellipsis">
+      
+        Fontes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ferramentas-para-desenvolvimento-web">
+<span class="md-ellipsis">
+      
+        💻 Ferramentas para Desenvolvimento Web
+      
+    </span>
+</a>
+<nav aria-label="💻 Ferramentas para Desenvolvimento Web" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#o-basico-para-front-end">
+<span class="md-ellipsis">
+      
+        O Básico para Front-End
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#frameworks-javascript">
+<span class="md-ellipsis">
+      
+        Frameworks JavaScript
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ide-e-editores">
+<span class="md-ellipsis">
+      
+        IDE e Editores
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extensoes-vs-code-recomendadas">
+<span class="md-ellipsis">
+      
+        Extensões VS Code Recomendadas
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#acessibilidade">
+<span class="md-ellipsis">
+      
+        Acessibilidade
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#responsividade">
+<span class="md-ellipsis">
+      
+        Responsividade
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#heuristicas-de-nielsen">
+<span class="md-ellipsis">
+      
+        🔟 Heurísticas de Nielsen
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pessoas-importantes-em-ux">
+<span class="md-ellipsis">
+      
+        📚 Pessoas Importantes em UX
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#glossario">
+<span class="md-ellipsis">
+      
+        📖 Glossário
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#para-aprofundar">
+<span class="md-ellipsis">
+      
+        🎬 Para Aprofundar
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#perguntas-para-fixacao">
+<span class="md-ellipsis">
+      
+        ✅ Perguntas para Fixação
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#proxima-aula">
+<span class="md-ellipsis">
+      
+        🔜 Próxima Aula
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<div><h1 id="aula-ux-design-fundamentos-e-ferramentas">Aula — UX Design: Fundamentos e Ferramentas<a class="headerlink" href="#aula-ux-design-fundamentos-e-ferramentas" title="Permanent link">¶</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Informações da Aula</p>
+<p><strong>Disciplina:</strong> Ferramentas Web e UX<br/>
+<strong>Professor:</strong> Dr. Claudinei Dias (Ney)<br/>
+<strong>Data:</strong> Março de 2026<br/>
+<strong>Tema:</strong> UX Design, Usabilidade e Prototipagem</p>
+</div>
+<hr/>
+<h2 id="o-que-e-ux-design">🎯 O que é UX Design?<a class="headerlink" href="#o-que-e-ux-design" title="Permanent link">¶</a></h2>
+<p><strong>UX</strong> (User Experience) é o processo de aumentar a satisfação e lealdade do cliente, melhorando a usabilidade, facilidade de uso e o prazer proporcionado na interação entre consumidor e produto.</p>
+<p>O termo foi criado por <strong>Don Norman</strong> enquanto trabalhava na Apple.</p>
+<div class="admonition quote">
+<p class="admonition-title">Definição</p>
+<p>"User Experience envolve os sentimentos de uma pessoa em relação à utilização de um determinado produto, sistema ou serviço."</p>
+</div>
+<hr/>
+<h2 id="os-3-pilares-das-boas-experiencias">🔺 Os 3 Pilares das Boas Experiências<a class="headerlink" href="#os-3-pilares-das-boas-experiencias" title="Permanent link">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Importante — Provável conteúdo de prova!</p>
+<p>Boas experiências necessariamente atendem a estes 3 pontos principais:</p>
+</div>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>        🍦 DESEJABILIDADE
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>           "Quero usar?"
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>              ▲
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>             ╱ ╲
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>            ╱   ╲
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>           ╱     ╲
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>          ╱       ╲
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>         ╱  👆     ╲
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>        ╱ USABILIDADE╲
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>       ╱  "Consigo    ╲
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>      ╱    usar?"      ╲
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>     ╱                  ╲
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>    ╱    🧹 UTILIDADE    ╲
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>   ╱     "Preciso usar?"  ╲
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>  ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Pilar</th>
+<th>Pergunta-chave</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Utilidade</strong></td>
+<td>Preciso usar?</td>
+<td>O produto resolve um problema real</td>
+</tr>
+<tr>
+<td><strong>Usabilidade</strong></td>
+<td>Consigo usar?</td>
+<td>É fácil de usar e aprender</td>
+</tr>
+<tr>
+<td><strong>Desejabilidade</strong></td>
+<td>Quero usar?</td>
+<td>É atraente e agradável</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="colmeia-de-experiencia-do-usuario-peter-morville">🐝 Colmeia de Experiência do Usuário (Peter Morville)<a class="headerlink" href="#colmeia-de-experiencia-do-usuario-peter-morville" title="Permanent link">¶</a></h2>
+<p>Peter Morville criou a <strong>Colmeia de UX</strong> — 7 definições que juntas criam o valor do UX:</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Útil</strong></td>
+<td>O produto serve para alguma coisa?</td>
+</tr>
+<tr>
+<td><strong>Usável</strong></td>
+<td>É fácil de usar?</td>
+</tr>
+<tr>
+<td><strong>Desejável</strong></td>
+<td>Quero usar isso?</td>
+</tr>
+<tr>
+<td><strong>Encontrável</strong></td>
+<td>Consigo achar o que preciso?</td>
+</tr>
+<tr>
+<td><strong>Acessível</strong></td>
+<td>Pessoas com deficiência conseguem usar?</td>
+</tr>
+<tr>
+<td><strong>Credível</strong></td>
+<td>Posso confiar neste produto?</td>
+</tr>
+<tr>
+<td><strong>Valioso</strong></td>
+<td>Agrega valor ao negócio e ao usuário?</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="o-que-e-usabilidade">📋 O que é Usabilidade?<a class="headerlink" href="#o-que-e-usabilidade" title="Permanent link">¶</a></h2>
+<p>O termo <strong>usabilidade</strong> vem da ciência cognitiva e significa "fácil de usar".</p>
+<h3 id="5-criterios-de-nielsen-para-uma-boa-interface">5 Critérios de Nielsen para uma boa interface:<a class="headerlink" href="#5-criterios-de-nielsen-para-uma-boa-interface" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Critério</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Facilidade de aprendizagem</strong></td>
+<td>Rápido de aprender a usar</td>
+</tr>
+<tr>
+<td><strong>Eficiência de uso</strong></td>
+<td>Usuários experientes são produtivos</td>
+</tr>
+<tr>
+<td><strong>Facilidade de memorização</strong></td>
+<td>Fácil de lembrar como usar</td>
+</tr>
+<tr>
+<td><strong>Baixas taxas de erro</strong></td>
+<td>Poucos erros e fácil de se recuperar</td>
+</tr>
+<tr>
+<td><strong>Satisfação subjetiva</strong></td>
+<td>Agradável de usar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="efeito-de-usabilidade-estetica">Efeito de Usabilidade Estética<a class="headerlink" href="#efeito-de-usabilidade-estetica" title="Permanent link">¶</a></h3>
+<p>O usuário tende a correlacionar usabilidade com estética:</p>
+<ul>
+<li>Estética agradável = parece fácil de usar</li>
+<li>Usuários são mais tolerantes a pequenos erros em interfaces bonitas</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Reflexão</p>
+<p>De que adianta uma loja online linda se o usuário tem dificuldade de encontrar o produto ou encerrar a compra?</p>
+</div>
+<p><strong>Conclusão:</strong> Usabilidade e estética são complementares e devem andar juntas.</p>
+<hr/>
+<h2 id="ux-vs-ui-qual-a-diferenca">🎨 UX vs UI — Qual a diferença?<a class="headerlink" href="#ux-vs-ui-qual-a-diferenca" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>UX (User Experience)</th>
+<th>UI (User Interface)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Foco</strong></td>
+<td>Experiência completa do usuário</td>
+<td>Visual e interação da interface</td>
+</tr>
+<tr>
+<td><strong>Pergunta</strong></td>
+<td>Como o usuário se sente?</td>
+<td>Como o usuário vê e interage?</td>
+</tr>
+<tr>
+<td><strong>Entrega</strong></td>
+<td>Pesquisa, fluxos, wireframes</td>
+<td>Cores, tipografia, botões, layouts</td>
+</tr>
+</tbody>
+</table>
+<p><strong>UI é o responsável pelo UX</strong> — é o processo de guiar visualmente o usuário através da interface, utilizando elementos interativos em todas as plataformas.</p>
+<h3 id="dicas-de-ui">Dicas de UI<a class="headerlink" href="#dicas-de-ui" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Agrupar:</strong> Funções similares juntas, não fragmentadas</li>
+<li><strong>Destaque:</strong> Cores só quando necessário (não distrair)</li>
+<li><strong>Menos é mais:</strong> Formulários só com o necessário</li>
+<li><strong>Links:</strong> Evitar excesso (não distrair o usuário)</li>
+<li><strong>Call to Action:</strong> Trocar "Cadastre-se agora" por "Quero receber as melhores ofertas"</li>
+</ul>
+<hr/>
+<h2 id="os-10-principios-de-ux-joshua-porter">📝 Os 10 Princípios de UX (Joshua Porter)<a class="headerlink" href="#os-10-principios-de-ux-joshua-porter" title="Permanent link">¶</a></h2>
+<ol>
+<li>A experiência <strong>pertence ao usuário</strong></li>
+<li>A área de UX é <strong>holística</strong> (visão do todo)</li>
+<li>Uma boa experiência é <strong>invisível</strong> pelo usuário</li>
+<li>Toda experiência possui um <strong>ciclo</strong></li>
+<li><strong>O contexto é o rei</strong></li>
+<li>Boas experiências mantêm o usuário <strong>no controle</strong></li>
+<li>A experiência digital é <strong>social</strong></li>
+<li><strong>Psicologia</strong> é algo primário (cores, emoções)</li>
+<li>A UX é uma <strong>conversa</strong></li>
+<li>Grandes experiências são <strong>simples</strong></li>
+</ol>
+<hr/>
+<h2 id="design-centrado-no-usuario">👤 Design Centrado no Usuário<a class="headerlink" href="#design-centrado-no-usuario" title="Permanent link">¶</a></h2>
+<p>Mantenha o foco na <strong>necessidade, desejo e limitações do usuário</strong> durante toda a concepção do projeto.</p>
+<h3 id="etapas-do-design-centrado-no-usuario">Etapas do Design Centrado no Usuário:<a class="headerlink" href="#etapas-do-design-centrado-no-usuario" title="Permanent link">¶</a></h3>
+<ol>
+<li>Identificar requisitos</li>
+<li>Criar soluções alternativas</li>
+<li>Construir protótipos testáveis</li>
+<li>Avaliar com usuários</li>
+</ol>
+<hr/>
+<h2 id="os-5-passos-do-ux">🚀 Os 5 Passos do UX<a class="headerlink" href="#os-5-passos-do-ux" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Passo</th>
+<th>Nome</th>
+<th>O que fazer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Estratégia</strong></td>
+<td>Definir objetivo do produto e necessidades do usuário</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Escopo</strong></td>
+<td>Identificar soluções que atendem as necessidades</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Estrutura</strong></td>
+<td>Definir formato e design de interação</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Wireframe</strong></td>
+<td>Criar protótipo de baixa fidelidade</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Design UI/UX</strong></td>
+<td>Criar protótipo de alta fidelidade</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="wireframe-vs-mockup-vs-prototipo">📐 Wireframe vs Mockup vs Protótipo<a class="headerlink" href="#wireframe-vs-mockup-vs-prototipo" title="Permanent link">¶</a></h2>
+<h3 id="o-fluxo-de-desenvolvimento">O Fluxo de Desenvolvimento<a class="headerlink" href="#o-fluxo-de-desenvolvimento" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>│  WIREFRAME  │ ──▶ │   MOCKUP    │ ──▶ │  PROTÓTIPO  │
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>│   (Esboço)  │     │  (Estático) │     │  (Simula)   │
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>└─────────────┘     └─────────────┘     └─────────────┘
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>   Rascunho          Com visual          Interativo
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>   Sem cores         Com cores           Clicável
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>   Estrutura         Design final        Feedback
+</code></pre></div>
+<h3 id="comparativo">Comparativo<a class="headerlink" href="#comparativo" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Wireframe</th>
+<th>Mockup</th>
+<th>Protótipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fidelidade</strong></td>
+<td>Baixa</td>
+<td>Média/Alta</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><strong>Cores</strong></td>
+<td>Não (monocromático)</td>
+<td>Sim</td>
+<td>Sim</td>
+</tr>
+<tr>
+<td><strong>Interação</strong></td>
+<td>Não</td>
+<td>Não</td>
+<td>Sim</td>
+</tr>
+<tr>
+<td><strong>Objetivo</strong></td>
+<td>Estrutura e layout</td>
+<td>Visual final</td>
+<td>Testar usabilidade</td>
+</tr>
+<tr>
+<td><strong>Ferramenta</strong></td>
+<td>Papel, Wireframe.cc</td>
+<td>Figma, Sketch</td>
+<td>Figma, Framer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wireframe">Wireframe<a class="headerlink" href="#wireframe" title="Permanent link">¶</a></h3>
+<p>Esboços simples de telas — estruturam e validam ideias <strong>sem</strong> detalhes como cores, fontes ou imagens.</p>
+<p><strong>Elementos básicos:</strong> cabeçalhos, rodapés, barras laterais, áreas de conteúdo.</p>
+<p><strong>Ajuda a entender:</strong>
+- Tipos de conteúdo do site
+- Posicionamento dos elementos
+- Quantidade de telas necessárias</p>
+<div class="admonition note">
+<p class="admonition-title">Dica da aula</p>
+<p>Usar <strong>paletas monocromáticas</strong> para wireframes (apenas tons de cinza).</p>
+</div>
+<h3 id="mockup">Mockup<a class="headerlink" href="#mockup" title="Permanent link">¶</a></h3>
+<p>Modelo mais detalhado com questões estéticas importantes, mas <strong>estático</strong> (não permite interação).</p>
+<h3 id="prototipo">Protótipo<a class="headerlink" href="#prototipo" title="Permanent link">¶</a></h3>
+<p><strong>Simulador</strong> que permite testar interações e usabilidade. Última fase antes do desenvolvimento.</p>
+<p><strong>Permite:</strong>
+- Simular interações do usuário
+- Ajustar pontos que precisam de revisão
+- Encontrar e corrigir erros
+- Melhorar feedback visual</p>
+<div class="admonition warning">
+<p class="admonition-title">Na disciplina</p>
+<p>Não usar baixa fidelidade — usar protótipos de alta fidelidade!</p>
+</div>
+<hr/>
+<h2 id="ferramentas-essenciais">🛠️ Ferramentas Essenciais<a class="headerlink" href="#ferramentas-essenciais" title="Permanent link">¶</a></h2>
+<h3 id="prototipagem-e-design">Prototipagem e Design<a class="headerlink" href="#prototipagem-e-design" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ferramenta</th>
+<th>Tipo</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Figma</strong></td>
+<td>Design/Protótipo</td>
+<td>figma.com</td>
+</tr>
+<tr>
+<td><strong>Framer</strong></td>
+<td>Design/Protótipo</td>
+<td>framer.com</td>
+</tr>
+<tr>
+<td><strong>Sketch</strong></td>
+<td>Design (Mac)</td>
+<td>sketch.com</td>
+</tr>
+<tr>
+<td><strong>Adobe XD</strong></td>
+<td>Design/Protótipo</td>
+<td>adobe.com/products/xd</td>
+</tr>
+<tr>
+<td><strong>Wireframe.cc</strong></td>
+<td>Wireframe</td>
+<td>wireframe.cc</td>
+</tr>
+<tr>
+<td><strong>Mockflow</strong></td>
+<td>Mockup</td>
+<td>mockflow.com</td>
+</tr>
+<tr>
+<td><strong>Miro</strong></td>
+<td>Colaboração</td>
+<td>miro.com</td>
+</tr>
+<tr>
+<td><strong>LucidChart</strong></td>
+<td>Diagramas</td>
+<td>lucidchart.com</td>
+</tr>
+</tbody>
+</table>
+<h3 id="paleta-de-cores">Paleta de Cores<a class="headerlink" href="#paleta-de-cores" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ferramenta</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Adobe Color</strong></td>
+<td>color.adobe.com</td>
+</tr>
+<tr>
+<td><strong>Coolors</strong></td>
+<td>coolors.co</td>
+</tr>
+<tr>
+<td><strong>Paletton</strong></td>
+<td>paletton.com</td>
+</tr>
+<tr>
+<td><strong>MyColor Space</strong></td>
+<td>mycolor.space</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Dica</p>
+<p>Defina uma <strong>paleta de cores de referência</strong> no projeto inteiro para manter consistência.</p>
+</div>
+<h3 id="avaliacao-de-ux">Avaliação de UX<a class="headerlink" href="#avaliacao-de-ux" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ferramenta</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IXD Checklist</strong></td>
+<td>Checklist de UX por categorias (ixdchecklist.com)</td>
+</tr>
+<tr>
+<td><strong>WAVE</strong></td>
+<td>Avaliação de acessibilidade (wave.webaim.org)</td>
+</tr>
+<tr>
+<td><strong>UX CHECK</strong></td>
+<td>Extensão Chrome para avaliação heurística</td>
+</tr>
+</tbody>
+</table>
+<h3 id="design-systems-e-bibliotecas">Design Systems e Bibliotecas<a class="headerlink" href="#design-systems-e-bibliotecas" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sistema</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Material Design</strong></td>
+<td>Sistema de design do Google (m3.material.io)</td>
+</tr>
+<tr>
+<td><strong>Bootstrap</strong></td>
+<td>Framework CSS responsivo</td>
+</tr>
+<tr>
+<td><strong>Ant Design</strong></td>
+<td>Biblioteca open source para React</td>
+</tr>
+<tr>
+<td><strong>Material UI</strong></td>
+<td>Componentes React baseados no Material Design</td>
+</tr>
+</tbody>
+</table>
+<h3 id="componentes-css">Componentes CSS<a class="headerlink" href="#componentes-css" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ferramenta</th>
+<th>O que oferece</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>UIverse</strong></td>
+<td>Botões, Cards, Loaders, Inputs (uiverse.io)</td>
+</tr>
+<tr>
+<td><strong>UI Glass</strong></td>
+<td>Efeitos de vidro (ui.glass/generator)</td>
+</tr>
+<tr>
+<td><strong>CSSmatic</strong></td>
+<td>Box Shadow, Gradients (cssmatic.com)</td>
+</tr>
+<tr>
+<td><strong>Grabient</strong></td>
+<td>Gradientes (grabient.com)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="banco-de-imagens-gratuitas">Banco de Imagens Gratuitas<a class="headerlink" href="#banco-de-imagens-gratuitas" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Site</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unsplash</strong></td>
+<td>unsplash.com</td>
+</tr>
+<tr>
+<td><strong>Pexels</strong></td>
+<td>pexels.com</td>
+</tr>
+<tr>
+<td><strong>Pixabay</strong></td>
+<td>pixabay.com</td>
+</tr>
+<tr>
+<td><strong>Reshot</strong></td>
+<td>reshot.com</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ilustracoes-e-avatares">Ilustrações e Avatares<a class="headerlink" href="#ilustracoes-e-avatares" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Site</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>unDraw</strong></td>
+<td>Ilustrações SVG</td>
+</tr>
+<tr>
+<td><strong>Avataaars</strong></td>
+<td>Geradores de avatares</td>
+</tr>
+<tr>
+<td><strong>Open Doodles</strong></td>
+<td>Ilustrações desenho à mão</td>
+</tr>
+<tr>
+<td><strong>Storyset</strong></td>
+<td>Ilustrações animadas</td>
+</tr>
+<tr>
+<td><strong>Blush Design</strong></td>
+<td>Ilustrações customizáveis</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fontes">Fontes<a class="headerlink" href="#fontes" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Site</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Google Fonts</strong></td>
+<td>fonts.google.com</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="ferramentas-para-desenvolvimento-web">💻 Ferramentas para Desenvolvimento Web<a class="headerlink" href="#ferramentas-para-desenvolvimento-web" title="Permanent link">¶</a></h2>
+<h3 id="o-basico-para-front-end">O Básico para Front-End<a class="headerlink" href="#o-basico-para-front-end" title="Permanent link">¶</a></h3>
+<p>HTML + CSS + JavaScript = <strong>Suficiente para desenvolver front-end</strong></p>
+<h3 id="frameworks-javascript">Frameworks JavaScript<a class="headerlink" href="#frameworks-javascript" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>React</strong></td>
+<td>Biblioteca do Facebook</td>
+</tr>
+<tr>
+<td><strong>Vue</strong></td>
+<td>Framework progressivo</td>
+</tr>
+<tr>
+<td><strong>Angular</strong></td>
+<td>Framework completo do Google</td>
+</tr>
+<tr>
+<td><strong>Webpack</strong></td>
+<td>Bundler de módulos</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ide-e-editores">IDE e Editores<a class="headerlink" href="#ide-e-editores" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ferramenta</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>VS Code</strong></td>
+<td>code.visualstudio.com</td>
+</tr>
+<tr>
+<td><strong>CodePen</strong></td>
+<td>codepen.io (editor online)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extensoes-vs-code-recomendadas">Extensões VS Code Recomendadas<a class="headerlink" href="#extensoes-vs-code-recomendadas" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>HTML Snippets</strong> — Tags HTML5</li>
+<li><strong>HTML CSS Support</strong> — CSS Intellisense para HTML</li>
+<li><strong>Live Server</strong> — Servidor local com recarga automática</li>
+</ul>
+<h3 id="acessibilidade">Acessibilidade<a class="headerlink" href="#acessibilidade" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>WCAG Guidelines</strong></td>
+<td>w3.org/WAI/WCAG21/quickref</td>
+</tr>
+<tr>
+<td><strong>Guia WCAG</strong></td>
+<td>guia-wcag.com</td>
+</tr>
+<tr>
+<td><strong>eMAG</strong></td>
+<td>emag.governoeletronico.gov.br</td>
+</tr>
+</tbody>
+</table>
+<h3 id="responsividade">Responsividade<a class="headerlink" href="#responsividade" title="Permanent link">¶</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Dica da aula</p>
+<p>Na responsividade, <strong>o que manda é a largura</strong> da tela.</p>
+</div>
+<ul>
+<li><strong>Consórcio W3</strong> — Principal consórcio de boas práticas Web</li>
+</ul>
+<hr/>
+<h2 id="heuristicas-de-nielsen">🔟 Heurísticas de Nielsen<a class="headerlink" href="#heuristicas-de-nielsen" title="Permanent link">¶</a></h2>
+<p>Jakob Nielsen criou as 10 heurísticas de usabilidade:</p>
+<ol>
+<li>Visibilidade do status do sistema</li>
+<li>Correspondência com o mundo real</li>
+<li>Controle e liberdade do usuário</li>
+<li>Consistência e padrões</li>
+<li>Prevenção de erros</li>
+<li>Reconhecimento em vez de memorização</li>
+<li>Flexibilidade e eficiência de uso</li>
+<li>Design estético e minimalista</li>
+<li>Ajudar usuários a reconhecer e recuperar erros</li>
+<li>Ajuda e documentação</li>
+</ol>
+<p><strong>Referência:</strong> <a href="https://www.nngroup.com/">Nielsen Norman Group</a></p>
+<hr/>
+<h2 id="pessoas-importantes-em-ux">📚 Pessoas Importantes em UX<a class="headerlink" href="#pessoas-importantes-em-ux" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Nome</th>
+<th>Contribuição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Don Norman</strong></td>
+<td>Criou o termo "User Experience" na Apple</td>
+</tr>
+<tr>
+<td><strong>Peter Morville</strong></td>
+<td>Colmeia de Experiência do Usuário</td>
+</tr>
+<tr>
+<td><strong>Jakob Nielsen</strong></td>
+<td>10 Heurísticas de Usabilidade</td>
+</tr>
+<tr>
+<td><strong>Joshua Porter</strong></td>
+<td>10 Princípios de UX</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="glossario">📖 Glossário<a class="headerlink" href="#glossario" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>UX</strong></td>
+<td>User Experience (Experiência do Usuário)</td>
+</tr>
+<tr>
+<td><strong>UI</strong></td>
+<td>User Interface (Interface do Usuário)</td>
+</tr>
+<tr>
+<td><strong>IHC</strong></td>
+<td>Interação Humano-Computador</td>
+</tr>
+<tr>
+<td><strong>Wireframe</strong></td>
+<td>Esboço de baixa fidelidade</td>
+</tr>
+<tr>
+<td><strong>Mockup</strong></td>
+<td>Modelo visual estático</td>
+</tr>
+<tr>
+<td><strong>Protótipo</strong></td>
+<td>Simulador interativo</td>
+</tr>
+<tr>
+<td><strong>Heurística</strong></td>
+<td>Regra prática para avaliação</td>
+</tr>
+<tr>
+<td><strong>WCAG</strong></td>
+<td>Web Content Accessibility Guidelines</td>
+</tr>
+<tr>
+<td><strong>W3C</strong></td>
+<td>World Wide Web Consortium</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="para-aprofundar">🎬 Para Aprofundar<a class="headerlink" href="#para-aprofundar" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nielsen Norman Group</strong></td>
+<td>nngroup.com</td>
+</tr>
+<tr>
+<td><strong>UX Design Brasil</strong></td>
+<td>brasil.uxdesign.cc</td>
+</tr>
+<tr>
+<td><strong>Behance</strong></td>
+<td>behance.net (inspiração de designs)</td>
+</tr>
+<tr>
+<td><strong>Dribbble</strong></td>
+<td>dribbble.com (inspiração de designs)</td>
+</tr>
+<tr>
+<td><strong>OverAPI Cheat Sheets</strong></td>
+<td>overapi.com</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="perguntas-para-fixacao">✅ Perguntas para Fixação<a class="headerlink" href="#perguntas-para-fixacao" title="Permanent link">¶</a></h2>
+<div class="admonition question">
+<p class="admonition-title">1. Os 3 Pilares</p>
+<p>Quais são os 3 pilares das boas experiências e o que cada um significa? Por que eles formam uma pirâmide nessa ordem?</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">2. Wireframe vs Mockup vs Protótipo</p>
+<p>Explique a diferença entre Wireframe, Mockup e Protótipo. Em qual etapa do projeto cada um é usado?</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">3. Usabilidade</p>
+<p>Segundo Nielsen, quais são os 5 critérios que definem uma boa interface? Dê um exemplo de um site/app que atende bem esses critérios.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">4. Design Centrado no Usuário</p>
+<p>O que significa "design centrado no usuário" e por que é importante manter o foco nas necessidades do usuário durante todo o projeto?</p>
+</div>
+<hr/>
+<h2 id="proxima-aula">🔜 Próxima Aula<a class="headerlink" href="#proxima-aula" title="Permanent link">¶</a></h2>
+<ul>
+<li>Prática com <strong>Figma</strong></li>
+<li>Criação de protótipos de alta fidelidade</li>
+<li>Aplicação das heurísticas de Nielsen</li>
+</ul></div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="Última atualização">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="10 de março de 2026 08:34:19 UTC"><span class="timeago" datetime="2026-03-10T08:34:19+00:00" locale="pt"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="10 de março de 2026 08:34:19 UTC">2026-03-10</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="Criado em">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="10 de março de 2026 08:34:19 UTC"><span class="timeago" datetime="2026-03-10T08:34:19+00:00" locale="pt"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="10 de março de 2026 08:34:19 UTC">2026-03-10</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Voltar para o topo
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/gcomercialjorge-hue" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script src="../../../js/timeago.min.js"></script>
+<script src="../../../js/timeago_mkdocs_material.js"></script>
+<script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
+</body>
+</html>

@@ -22,7 +22,7 @@ Este é um projeto pessoal que eu criei para documentar e compartilhar com a tur
 | Se você quer... | Vá para... |
 |-----------------|------------|
 | Acompanhar as aulas na ordem | [📅 2026](2026/index.md) |
-| Ver a semana atual | [Semana 02](2026/semana-02/index.md) |
+| Ver a semana atual | [Semana 03](2026/semana-03/index.md) |
 | Baixar materiais de estudo | [🧠 Materiais](frameworks/index.md) |
 
 ---
@@ -31,7 +31,7 @@ Este é um projeto pessoal que eu criei para documentar e compartilhar com a tur
 
 | Semana | Aulas | Data |
 |--------|-------|------|
-| [Semana 02](2026/semana-02/index.md) | PAC e Lógica de Programação | Fevereiro 2026 |
+| [Semana 03](2026/semana-03/index.md) | Sistemas Operacionais e UX Design | Março 2026 |
 
 ---
 

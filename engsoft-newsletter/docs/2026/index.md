@@ -10,7 +10,8 @@ Bem-vindo ao conteúdo do primeiro ano de Engenharia de Software!
 |--------|----------------|-------|
 | [Semana 01](semana-01/index.md) | Git, GitHub e Arquitetura de Hardware | 3 aulas |
 | [Semana 02](semana-02/index.md) | PAC e Lógica de Programação | 2 aulas |
-| Semana 03 | *Em breve* | - |
+| [Semana 03](semana-03/index.md) | Sistemas Operacionais e UX Design | 2 aulas |
+| Semana 04 | *Em breve* | - |
 
 ---
 
@@ -31,7 +32,8 @@ Este semestre estamos cursando:
 ```
 Semana 01: ████████████████████ 100%
 Semana 02: ████████████████████ 100%
-Semana 03: ░░░░░░░░░░░░░░░░░░░░   0%
+Semana 03: ████████████████████ 100%
+Semana 04: ░░░░░░░░░░░░░░░░░░░░   0%
 ```
 
 ---
